@@ -1,0 +1,51 @@
+.Poaps-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 25px 27px 16px;
+}
+
+.Poaps-image-container {
+  margin-right: 15px;
+  text-align: center;
+}
+
+.Poaps-rounded-image {
+  border-radius: 50%;
+  width: 141px;
+  height: 141px;
+  object-fit: cover;
+}
+
+.Poaps-heading {
+  color: var(--fonts-icons-01, #fffff5);
+  margin-top: 32px;
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+.Poaps-svg-background {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--Button-Primary, #f4f85a);
+  margin-top: 20px;
+}
+
+.poaps-right {
+  margin-left: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .Poaps-rounded-image {
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+  }
+  .Poaps-heading {
+    font-size: 20px;
+  }
+}
