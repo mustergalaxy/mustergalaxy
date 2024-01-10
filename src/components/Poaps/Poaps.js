@@ -12,8 +12,8 @@ const images = [
 function Poaps() {
   return (
     <>
-      <div style={{ display: "flex" }}>
-        <h2 className="Poaps-heading">POAPs</h2>
+      <div style={{ display: "flex", justifyContent:'center', alignItems:'center',paddingTop:'32px', paddingBottom:'24px' }}>
+        <div className="Poaps-heading">POAPs</div>
         <span className="poaps-right Poaps-svg-background">
           <svg
             xmlns="http://www.w3.org/2000/svg"

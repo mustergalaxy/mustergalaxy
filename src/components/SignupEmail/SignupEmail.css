@@ -1,0 +1,152 @@
+.signup-email-main-container{
+    background-color: #121212;
+    /* height: 100vh; */
+}
+.signup-email-side-ellipse{
+    width: 335px;
+    height: 376px;
+    flex-shrink: 0;
+    border-radius: 576px;
+opacity: 0.4;
+background: var(--Bg-gradients-primary, linear-gradient(180deg, #F4F85A 0%, #FEFFCF 100%));
+filter: blur(100px);
+position: absolute;
+}
+
+.custom-input-margin {
+    margin-bottom: 20px;
+  }
+
+.signup-email-field-container{
+    margin-top: 56px;
+}
+
+.signup-email-heading{
+/* font-family: Aeonik TRIAL; */
+font-size: 40px;
+line-height: 120%; 
+letter-spacing: -0.8px;
+color:#FFFFF5;
+}
+
+.signup-email-field-container{
+    margin-top: 56px;
+}
+
+.signup-email-underlined-text{
+    color: var(--fonts-icons-02, var(--text-02, #A3A393));
+/* font-family: Aeonik TRIAL; */
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.24px;
+text-decoration-line: underline;
+width: 298px;
+padding-top: 8px;
+padding-bottom: 32px;
+}
+
+.signup-email-checkbox-text{
+    color: var(--fonts-icons-02, var(--text-02, #A3A393));
+/* Onboarding/Details/Details Reg 12 - 120% */
+/* font-family: Aeonik TRIAL; */
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 14.4px */
+letter-spacing: -0.24px;
+padding-top: 4px;
+/* display: flex;
+justify-content: center;
+align-items: center; */
+}
+
+.signup-email-button-container{
+    display: flex;
+
+justify-content: center;
+padding-top: 56px;
+}
+
+.signup-email-button{
+    display: flex;
+width: 167px;
+padding: 12px 24px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 16px;
+background: var(--Primary, #F4F85A);
+/* font-family: Aeonik TRIAL; */
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%;
+letter-spacing: -0.304px;
+color: #121212;
+cursor: pointer;
+}
+.signup-email-button-unchecked{
+    display: flex;
+width: 167px;
+padding: 12px 24px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 16px;
+background: var(--Button-Disable, #42423A);
+/* font-family: Aeonik TRIAL; */
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%;
+letter-spacing: -0.304px;
+color: #121212;
+}
+
+.sign-email-content-wrapper{
+    position: relative;
+    height: 90.9vh;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:0,auto;
+    padding-left: 289px;
+}
+
+.sign-email-text{
+    width: 591px;
+    font-size: 16px;
+    color: white;
+}
+
+.signup-email-skip-text{
+    color: var(--fonts-icons-01, var(--text-01, #FFFFF5));
+
+/* Onboarding/Details/Details link 12 - 120% */
+/* font-family: Aeonik TRIAL; */
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 14.4px */
+letter-spacing: -0.24px;
+text-decoration-line: underline;
+padding-top: 24px;
+}
+
+@media screen and (max-width: 900px) {
+    .sign-email-content-wrapper{
+        padding-left: 0px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sign-email-text{
+        width: 351px;
+        font-size: 16px;
+        color: white;
+    }
+}

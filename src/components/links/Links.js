@@ -60,7 +60,7 @@ const links = [
 function Links() {
   return (
     <>
-      <h2 className="links-heading">Links</h2>
+      <div className="links-heading">Links</div>
       <div>
         {links.map((link) => (
           <div key={link.id} className="links-container">

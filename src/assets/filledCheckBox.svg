@@ -1,0 +1,61 @@
+
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 22 22"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="check">
+        <g clip-path="url(#clip0_1310_1796)">
+          <rect
+            x="1"
+            y="0.753906"
+            width="20"
+            height="20"
+            rx="8"
+            fill="url(#paint0_linear_1310_1796)"
+          />
+          <path
+            id="Vector"
+            d="M8.67794 13.0656L6.30728 10.5779L5.5 11.4191L8.67794 14.7539L15.5 7.59507L14.6984 6.75391L8.67794 13.0656Z"
+            fill="#121212"
+          />
+        </g>
+        <rect
+          x="1"
+          y="0.753906"
+          width="20"
+          height="20"
+          rx="8"
+          stroke="url(#paint1_linear_1310_1796)"
+        />
+      </g>
+      <defs>
+        <linearGradient
+          id="paint0_linear_1310_1796"
+          x1="5.875"
+          y1="6.50391"
+          x2="19.3036"
+          y2="7.46819"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#F4F85A" />
+          <stop offset="1" stop-color="#CDCDCD" />
+        </linearGradient>
+        <linearGradient
+          id="paint1_linear_1310_1796"
+          x1="5.875"
+          y1="6.50391"
+          x2="19.3036"
+          y2="7.46819"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#F4F85A" />
+          <stop offset="1" stop-color="#CDCDCD" />
+        </linearGradient>
+        <clipPath id="clip0_1310_1796">
+          <rect x="1" y="0.753906" width="20" height="20" rx="8" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>

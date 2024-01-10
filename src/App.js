@@ -1,33 +1,16 @@
 import React from 'react';
 
-import Collectibles from './components/Collectibles/Collectibles';
-import Poaps from './components/Poaps/Poaps';
-import Social from './components/Social/Social';
-import Addresses from './components/addresses/Addresses';
-import LeftComponent from './components/leftComponent/LeftComponent';
-import Links from './components/links/Links';
-import Ownership from './components/ownership/Ownership';
-import Subnames from './components/subnames/Subnames';
+import {
+  RouterProvider,
+} from "react-router-dom";
 
 import './App.css';
+import router from './routes/Routes';
 
 function App() {
-  return (
-    <div className="App">
-      <div className='leftcontainer'>
-      <LeftComponent/>
-      </div>
-      <div className='rightcontainer'>
-      <Social/>
-      <Collectibles/>
-      <Poaps/>
-      <Addresses/>
-      <Subnames/>
-      <Links/>
-      <Ownership/>
-      </div>
-     
-    </div>
+
+  return(
+    <RouterProvider router={router} />
   );
 }
 

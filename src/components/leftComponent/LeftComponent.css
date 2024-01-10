@@ -28,7 +28,16 @@
   justify-content: center;
   align-items: center;
 }
-
+.left-container-ellipse{
+  width: 249px;
+height: 249px;
+position: absolute;
+left: 25%;
+top: 75px;
+fill: var(--Element-fills-active, linear-gradient(94deg, #F4F85A 24.67%, #CDCDCD 87.64%));
+opacity: 0.3;
+filter: blur(150px);
+}
 .left-container-heading {
   font-size: 40px;
   font-weight: 400;
@@ -37,7 +46,7 @@
 
 .text-container {
   position: relative;
-  top: 6.5rem;
+  top: 5.5rem;
   text-align: center;
   margin-top: 20px;
 }
@@ -45,7 +54,6 @@
 .text-line {
   color: var(--fonts-icons-02, var(--text-02, #a3a393));
   text-align: center;
-  font-family: Aeonik TRIAL;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -67,7 +75,7 @@
   border-radius: 16px;
   background-color: #f4f85a;
   cursor: pointer;
-  font-family: Aeonik TRIAL;
+  /* font-family: Aeonik TRIAL; */
   font-size: 16px;
 
   font-weight: 700;
@@ -80,7 +88,7 @@
   background-color: #1b1b17;
   cursor: pointer;
   color: #f4f85a;
-  font-family: Aeonik TRIAL;
+  /* font-family: Aeonik TRIAL; */
   font-size: 16px;
 
   font-weight: 700;
@@ -100,7 +108,7 @@
   align-items: center;
   border: 1px solid black;
   padding: 8px 16px;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   border-radius: 25px;
   width: 170px;
   margin-left: 50px;
@@ -113,6 +121,14 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   font-size: 16px;
+
+  color: var(--fonts-icons-inverse, #121212);
+/* font-family: Aeonik TRIAL; */
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 19.2px */
+/* letter-spacing: -0.304px; */
 }
 
 .right {

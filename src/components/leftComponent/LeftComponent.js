@@ -8,7 +8,9 @@ import "./LeftComponent.css";
 function LeftComponent() {
   return (
     <div className="Left-component-container">
+       <div className="left-container-ellipse"></div>
       <div style={{ position: "relative" }}>
+       
         <div className="left-container-banner">
           <img
             src="https://picsum.photos/200/200"
@@ -92,8 +94,8 @@ function LeftComponent() {
         <div className="text-line">cddcdcdcd cdcdc c d cdcd cd cd cd </div>
 
         <div className="button-leftComponent-row">
-          <button className="button1">Button 1</button>
-          <button className="button2">Button 2</button>
+          <button className="button1">Send tokens</button>
+          <button className="button2">See on blockscanner</button>
         </div>
       </div>
     </div>

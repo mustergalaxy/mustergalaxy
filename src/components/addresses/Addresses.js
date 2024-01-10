@@ -24,7 +24,7 @@ const addresses = [
 function Addresses() {
   return (
     <>
-      <h2 className="Addresses-heading">Addresses</h2>
+      <div className="Addresses-heading">Addresses</div>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         {addresses.map((address) => (
           <div key={address.id} className="address-container">
