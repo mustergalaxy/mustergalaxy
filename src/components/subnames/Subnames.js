@@ -19,7 +19,7 @@ const addresses = [
 function Subnames() {
     return (
         <>
-        <h2 className='Subnames-heading'>Subnames</h2>
+        <div className='Subnames-heading'>Subnames</div>
         <div>
           {addresses.map((address) => (
             <div  key={address.id} className="Subnames-container">

@@ -1,7 +1,6 @@
 .Poaps-container {
   display: flex;
   flex-wrap: wrap;
-  padding: 0px 25px 27px 16px;
 }
 
 .Poaps-image-container {
@@ -18,20 +17,19 @@
 
 .Poaps-heading {
   color: var(--fonts-icons-01, #fffff5);
-  margin-top: 32px;
-  margin-bottom: 24px;
+  /* margin-top: 32px;
+  margin-bottom: 24px; */
   font-size: 24px;
 }
 .Poaps-svg-background {
   display: flex;
   width: 40px;
   height: 40px;
-  padding: 10px;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
   border: 1px solid var(--Button-Primary, #f4f85a);
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .poaps-right {

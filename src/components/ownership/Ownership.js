@@ -22,7 +22,7 @@ const data = [
 function Ownership() {
   return (
     <>
-      <h2 className="owner-heading">Ownership</h2>
+      <div className="owner-heading">Ownership</div>
       <div className="owner-main-container">
         {data.map((owner) => (
           <div key={owner.id} className="owner-container">

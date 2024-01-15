@@ -1,0 +1,126 @@
+.onBording-page-main-container{
+    display: flex;
+    background-color: #121212;
+    height: 100vh;
+}
+
+.onBording-page-left-container {
+    width: 50%;
+    /* height: 100%; */
+}
+
+#onBording-page-heading{
+    color: white;
+    font-size: 40px;
+}
+
+#onBording-page-text{
+    color: white;
+    font-size: 24px;
+}
+
+#onBording-page-underline-text{
+    color: white;
+    text-decoration: underline;
+    font-size: 12px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+#onBording-page-button{
+    padding: 12px 24px;
+    background-color: #F4F85A;
+    border-radius: 16px;
+    border: none;
+    margin-top: 56px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.onbording-Ellipses{
+    width: 321px;
+height: 209px;
+flex-shrink: 0;
+border-radius: 321px;
+background: var(--Bg-gradients-primary, linear-gradient(180deg, #F4F85A 0%, #FEFFCF 100%));
+filter: blur(100px);
+position: absolute;
+bottom: -180px;
+/* white-space: nowrap; */
+}
+
+.onBording-page-left-image{
+    width: 100%;
+    height: 99vh;
+}
+
+.onBording-page-right-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    position: relative; /* Add this line */
+    overflow: hidden; /* Add this line to prevent scrollbars */
+}
+
+@media screen and (max-width: 900px) {
+    .onBording-page-main-container{
+        flex-direction: column;
+      /* height: auto; */
+      }
+
+      .onBording-page-left-container {
+        width: 100%;
+        /* height: 100%; */
+    }
+    .onBording-page-left-image{
+        width: 100%;
+        height: 50vh;
+    }
+    .onBording-page-right-container{
+        padding-top: 30px;
+        width: 100%;
+        height: inherit;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .onBording-page-main-container{
+      flex-direction: column;
+    height: 100vh;
+    }
+    .onBording-page-left-container {
+        width: 100%;
+        /* height: 100%; */
+    }
+    .onBording-page-left-image{
+        width: 100%;
+        height: 40vh;
+    }
+    .onBording-page-right-container{
+        padding-top: 30px;
+        width: 100%;
+    }
+    #onBording-page-heading{
+        font-size: 30px;
+    }
+
+    #onBording-page-text{
+        color: white;
+        font-size: 20px;
+    }
+    
+    #onBording-page-underline-text{
+        color: white;
+        text-decoration: underline;
+        font-size: 12px;
+        margin-top: 12px;
+        cursor: pointer;
+    }
+    
+    #onBording-page-button{
+        font-size: 12px;
+    }
+  }
