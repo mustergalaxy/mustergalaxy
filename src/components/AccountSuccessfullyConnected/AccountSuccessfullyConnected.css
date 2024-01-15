@@ -1,14 +1,14 @@
-.UrbitIDCreated-main-container {
+.accountconnected-main-container {
   background-color: #333331;
   height: 100vh;
   width: 100vw;
   /* display: flex;
-  justify-content: center;
-  align-items: center; */
+    justify-content: center;
+    align-items: center; */
 }
 
-.UrbitIDCreated-text-container {
-  padding-left: 298px;
+.accountconnected-text-container {
+  /* padding-left: 298px; */
   width: 550px;
   height: 248px;
   display: flex;
@@ -22,7 +22,7 @@
   background: var(--background, #121212);
 }
 
-.UrbitIDCreated-text-main-container {
+.accountconnected-text-main-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,11 +31,11 @@
 }
 
 /* .UrbitIDCreated-text-container{
-    max-width: 500px;
-    background-color: black;
-} */
+      max-width: 500px;
+      background-color: black;
+  } */
 
-.UrbitIDCreated-main-heading {
+.accountconnected-main-heading {
   color: var(--fonts-icons-01, var(--text-01, #fffff5));
   text-align: center;
   font-size: 24px;
@@ -46,7 +46,7 @@
   padding: 8px;
 }
 
-.UrbitIDCreated-text {
+.accountconnected-text {
   color: var(--fonts-icons-02, var(--text-02, #a3a393));
   text-align: center;
 
@@ -59,7 +59,7 @@
   letter-spacing: -0.304px;
 }
 
-.UrbitIDCreated-button-container {
+.accountconnected-button-container {
   width: 167px;
   display: flex;
   justify-content: center;
@@ -67,7 +67,7 @@
   padding-top: 32px;
 }
 
-.UrbitIDCreated-button {
+.accountconnected-button {
   display: flex;
   padding: 12px 24px;
   justify-content: center;
@@ -78,7 +78,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  .UrbitIDCreated-text-main-container {
+  .accountconnected-text-main-container {
     padding-left: 0px;
   }
 }
