@@ -2,7 +2,6 @@ import * as React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import OnbordingPage from "../pages/Onbording/OnbordingPage";
 import NftComponent from "../pages/Nft/NftComponent";
-import Test from "../components/test/test";
 import SignUp from "../pages/SignUp/SignUpPage";
 import Sidebar from "../components/Sidebar/Sidebar";
 import LoginPage from "../pages/LoginPage/LoginPage";
@@ -67,10 +66,6 @@ const router = createBrowserRouter([
   {
     path: "/signupEmail",
     element: <SignupEmailPage />,
-  },
-  {
-    path: "/test",
-    element: <Test />,
   },
   {
     path: "/provider",
