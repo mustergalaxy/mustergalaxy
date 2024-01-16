@@ -104,6 +104,7 @@
   font-weight: 700;
   line-height: 120%; /* 19.2px */
   letter-spacing: -0.304px;
+  cursor: pointer;
 }
 .backupSeedPhraseToggle {
   display: flex;
@@ -113,6 +114,7 @@
   gap: 8px;
   border-radius: 16px;
   border: 2px solid var(--fonts-icons-01, #fffff5);
+  cursor: pointer;
 }
 .backupSeedCopyContainer {
   display: flex;

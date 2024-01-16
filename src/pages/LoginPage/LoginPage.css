@@ -5,15 +5,6 @@
   overflow: hidden;
 }
 .login-page-side-design {
-  /* width: 335px;
-    height: 576px;
-    flex-shrink: 0;
-    border-radius: 576px;
-opacity: 0.4;
-background: var(--Bg-gradients-primary, linear-gradient(180deg, #F4F85A 0%, #FEFFCF 100%));
-filter: blur(100px);
-position: absolute;
-top: -220px; */
   position: absolute;
   top: -200px;
   z-index: 0;
@@ -41,7 +32,7 @@ top: -220px; */
 .login-heading {
   /* font-family: Aeonik TRIAL; */
   font-size: 40px;
-  line-height: 120%; /* 48px */
+  line-height: 120%;
   letter-spacing: -0.8px;
   color: #fffff5;
 }
@@ -79,6 +70,7 @@ top: -220px; */
   line-height: 120%; /* 19.2px */
   letter-spacing: -0.304px;
   color: #121212;
+  cursor: pointer;
 }
 .login-button-container {
   display: flex;
