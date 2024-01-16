@@ -1,10 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar";
 import assetsImage from "../../assets";
 
 import "./CreateWalletSuccessful.css";
 
 const CreateWalletSuccessful = () => {
+  const navigate = useNavigate();
   return (
     <div className="createWalletSuccessful-main-comntainer">
       <div className="createWalletSuccessful-side-ellipse"></div>
@@ -19,7 +21,12 @@ const CreateWalletSuccessful = () => {
           All set, you’re wallet was successfully created!
         </div>
         <div>
-          <button className="createWalletSuccessful-button">Continue</button>
+          <button
+            onClick={() => navigate("/defaultbrowser")}
+            className="createWalletSuccessful-button"
+          >
+            Continue
+          </button>
         </div>
       </div>
       <div className="createWalletSuccessful-rightbottom-side-ellipse"></div>

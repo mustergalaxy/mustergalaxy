@@ -1,17 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
 import CustomInput from "../../components/customInput/CustomInput";
-import { styles } from "../../components/signupUrbitID/SignupUrbit.styles";
-import "./LoginPage.css";
 import CustomTooltip from "../../components/CustomToolTip/CustomToolTip";
+import { styles } from "../../components/signupUrbitID/SignupUrbit.styles";
+
 import assetsImage from "../../assets";
-import { useNavigate } from "react-router-dom";
+import "./LoginPage.css";
 
 const LoginPage = () => {
   const navigate = useNavigate();
 
   const Onbording = () => {
-    navigate("/"); // Replace '/path-to-redirect' with your desired path
+    navigate("/");
   };
 
   return (
@@ -123,7 +124,6 @@ const LoginPage = () => {
       <div className="login-page-right-side-design">
         <img src={assetsImage.loginRightSideDesign} alt=" side design " />
       </div>
-      {/* </div> */}
     </div>
   );
 };

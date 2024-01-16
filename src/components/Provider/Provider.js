@@ -1,9 +1,9 @@
 import React from "react";
-import "./Provider.css";
-import Sidebar from "../Sidebar/Sidebar";
 import { useNavigate } from "react-router-dom";
+import Sidebar from "../Sidebar/Sidebar";
 
 import assetsImage from "../../assets";
+import "./Provider.css";
 
 const metadata = [
   {
@@ -51,7 +51,6 @@ const Provider = () => {
               onClick={() => handleProviderClick(item)}
             >
               <div>
-                {/* <item.icon/> */}
                 <img src={assetsImage[item.icon]} alt="asset" />
               </div>
               <div>

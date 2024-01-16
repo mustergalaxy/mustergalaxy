@@ -28,19 +28,19 @@ import assetsImage from "../../assets";
 
 const metadata = [
   {
-    icon: "musterIcon",
+    icon: "wallet",
     heading: "Import wallet",
     about1:
       "Connect your existing wallet, all you need is to provide your recovery phrase.",
     about2: "",
-    link: "https://docs.holium.com/main/notifications-and-settings/adding-an-urbit-id",
+    link: "/importwalletseed",
   },
   {
-    icon: "wallet",
+    icon: "musterIcon",
     heading: "Muster wallet",
     about1: "Muster’s current supports covers",
     about2: "Ethereum, Solana, Hedera, Concodium, Sui, and Aptos",
-    link: "https://tlon.network/login",
+    link: "/createwalletpassword",
   },
 ];
 
@@ -51,13 +51,13 @@ const SetupWallet = () => {
   //     navigate('/signup'); // Replace '/path-to-redirect' with your desired path
   //   };
 
-  //   const handleProviderClick = (providerData) => {
-  //     console.log(providerData.link);
-  //     // Navigate to the desired route and pass the providerData as state
-  //     navigate('/providerIframe', { state: {link :providerData.link} });
-  //   };
+  const handleProviderClick = (providerData) => {
+    console.log(providerData.link);
+    // Navigate to the desired route and pass the providerData as state
+    // { state: { link: providerData.link } }
+    navigate(`${providerData.link}`, { state: { icon: providerData.icon } });
+  };
 
-  console.log(metadata[0].heading);
   return (
     <div className="setupwallet-main-comntainer">
       <div className="setupwallet-side-ellipse"></div>
@@ -80,7 +80,7 @@ const SetupWallet = () => {
             <div
               key={index}
               className="setupwallet-data-container"
-              // onClick={() => handleProviderClick(item)}
+              onClick={() => handleProviderClick(item)}
             >
               <div style={{ paddingTop: "5px" }}>
                 <img

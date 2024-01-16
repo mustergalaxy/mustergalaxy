@@ -1,9 +1,7 @@
 .signup-urbit-main-container {
+  position: relative;
   background-color: #121212;
-  /* height: 100vh; */
-  /* display: flex;
-    justify-content: center; 
-    align-items: center;  */
+  overflow: hidden;
 }
 .signup-urbit-side-ellipse {
   width: 335px;
@@ -34,16 +32,6 @@
   align-items: center;
   margin: 0, auto;
   padding-left: 289px;
-
-  /* position: "relative",
-          height: "100vh",
-          zIndex: 1,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          // paddingTop:'50px'
-          margin:'0, auto' */
 }
 
 .custom-input-margin {
@@ -78,7 +66,6 @@
 
 .signup-urbit-checkbox-text {
   color: var(--fonts-icons-02, var(--text-02, #a3a393));
-  /* Onboarding/Details/Details Reg 12 - 120% */
   /* font-family: Aeonik TRIAL; */
   font-size: 12px;
   font-style: normal;
@@ -86,10 +73,6 @@
   line-height: 120%; /* 14.4px */
   letter-spacing: -0.24px;
   padding-top: 4px;
-  /* display: flex;
-justify-content: center;
-align-items: center; */
-  /* padding-left: 289px; */
 }
 
 .signup-urbit-button-container {
@@ -133,6 +116,19 @@ align-items: center; */
   line-height: 120%;
   letter-spacing: -0.304px;
   color: #121212;
+}
+
+.sign-urbit-right-side-design {
+  position: absolute;
+  right: -110px;
+  bottom: -120px;
+  width: 482px;
+  height: 482px;
+  transform: rotate(90deg);
+  fill: rgba(255, 255, 255, 0.01);
+  stroke-width: 1px;
+  stroke: #fff;
+  backdrop-filter: blur(32px);
 }
 
 @media screen and (max-width: 900px) {

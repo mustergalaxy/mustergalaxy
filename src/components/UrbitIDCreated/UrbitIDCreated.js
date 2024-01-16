@@ -3,7 +3,10 @@ import assetsImage from "../../assets";
 import Sidebar from "../Sidebar/Sidebar";
 import "./UrbitIDCreted.css";
 
+import { useNavigate } from "react-router-dom";
+
 const UrbitIDCreated = () => {
+  const navigate = useNavigate();
   return (
     <div className="UrbitIDCreated-main-container">
       <div>
@@ -19,7 +22,12 @@ const UrbitIDCreated = () => {
           </div>
           <div className="UrbitIDCreated-text">Explain how it works here</div>
           <div className="UrbitIDCreated-button-container">
-            <button className="UrbitIDCreated-button">Continue</button>
+            <button
+              className="UrbitIDCreated-button"
+              onClick={() => navigate("/setupwallet")}
+            >
+              Continue
+            </button>
           </div>
         </div>
       </div>

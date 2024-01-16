@@ -1,34 +1,26 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import assetsImage from "../../assets";
 import Sidebar from "../Sidebar/Sidebar";
 import CustomInput from "../customInput/CustomInput";
+
 import "./BackupSeedPhrase.css";
 import { styles } from "./BackupSeedPhraseStyle";
 
-// import "./ImportWalletSeed.css";
-
 const BackupSeedPhrase = () => {
-  //   const [isToggled, setIsToggled] = useState(true);
-  //   const [numOfInputs, setNumOfInputs] = useState(12);
   const [isHidden, setIsHidden] = useState(true);
-
   const [selectedInputs, setSelectedInputs] = useState([]);
 
-  console.log("selectedInput==>", selectedInputs);
+  const navigate = useNavigate();
 
   const handleInputClick = (index) => {
     console.log("handleinput");
     setSelectedInputs((prevSelected) => {
-      // If the index is already selected, remove it from the array, otherwise add it
       return prevSelected.includes(index)
         ? prevSelected.filter((i) => i !== index)
         : [...prevSelected, index];
     });
   };
-
-  // Function to turn the toggle on
-
-  // Function to turn the toggle off
 
   const inputElements = [...Array(12)].map((_, index) => (
     <div key={index}>
@@ -36,12 +28,6 @@ const BackupSeedPhrase = () => {
         index={index + 1}
         style={{
           ...styles.inputfield,
-          ...(selectedInputs.includes(index)
-            ? {
-                backgroundColor: "var(--Card-fills-02, #1E1E1E)",
-                borderRadius: "16px",
-              }
-            : {}),
         }}
         type={isHidden ? "password" : "text"}
         onClick={() => handleInputClick(index)}
@@ -108,7 +94,12 @@ const BackupSeedPhrase = () => {
           {inputElements}
         </div>
         <div>
-          <button className="backupSeedPhrase-button">Continue</button>
+          <button
+            onClick={() => navigate("/verifyseedphrase")}
+            className="backupSeedPhrase-button"
+          >
+            Continue
+          </button>
         </div>
       </div>
       <div className="backupSeedPhrase-rightbottom-side-ellipse"></div>
