@@ -1,0 +1,55 @@
+.address-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--Borders-01, #2d2d2d);
+  padding: 8px 24px 8px 8px;
+  border-radius: 25px;
+  max-width: 212px;
+  width: auto;
+  padding: 8px 24px 8px 8px;
+  margin-right: 8px;
+}
+
+.address-left {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  display: flex;
+  width: 65px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--Card-fills-01, #121212);
+  overflow: hidden;
+}
+
+.address-right {
+  margin-left: auto;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.address-text {
+  color: white;
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.Addresses-heading {
+  color: var(--fonts-icons-01, #fffff5);
+  margin-top: 32px;
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  .Addresses-heading {
+    font-size: 20px;
+  }
+}

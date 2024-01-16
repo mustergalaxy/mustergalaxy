@@ -1,0 +1,118 @@
+.defaultBrowser-main-comntainer {
+  height: 100vh;
+  background: var(--background, #121212);
+}
+
+.defaultBrowser-side-ellipse {
+  width: 335px;
+  height: 376px;
+  flex-shrink: 0;
+  border-radius: 576px;
+  opacity: 0.4;
+  background: var(
+    --Bg-gradients-primary,
+    linear-gradient(180deg, #f4f85a 0%, #feffcf 100%)
+  );
+  filter: blur(100px);
+  position: absolute;
+  z-index: 0;
+}
+
+.defaultBrowser-text-container-wrapper {
+  position: relative;
+  /* top: -30px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  flex-direction: column;
+  padding-left: 289px;
+}
+
+.defaultBrowser-main-heading {
+  color: var(--fonts-icons-01, var(--text-01, #fffff5));
+  /* font-family: Aeonik TRIAL; */
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.8px;
+  max-width: 600px;
+  text-align: center;
+  padding: 16px 0px;
+}
+.defaultBrowser-text {
+  color: var(--fonts-icons-02, var(--text-02, #a3a393));
+  text-align: center;
+  /* font-family: Aeonik TRIAL; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.304px;
+  max-width: 591px;
+}
+
+.defaultBrowser-rightbottom-side-ellipse {
+  position: absolute;
+  width: 204px;
+  height: 205px;
+  flex-shrink: 0;
+  fill: var(
+    --Bg-gradients-primary,
+    linear-gradient(180deg, #f4f85a 0%, #feffcf 100%)
+  );
+  opacity: 0.4;
+  filter: blur(100px);
+  right: 0px;
+  bottom: 0px;
+  background-color: #f4f85a;
+}
+
+.defaultDrowser-checkbox-container {
+  display: flex;
+  padding: 16px 26px;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 16px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 16px;
+  border: 1px solid var(--Borders-01, #2d2d2d);
+  max-width: 315px;
+}
+
+.defaultbrowser-checbox-text {
+  color: var(--fonts-icons-01, var(--text-01, #fffff5));
+  text-align: center;
+  /* font-family: Aeonik TRIAL; */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.456px;
+}
+.defuaultbrowser-button {
+  display: flex;
+  width: 187px;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 16px;
+  background: var(--Primary, #f4f85a);
+  color: var(--fonts-icons-inverse, var(--background, #121212));
+  /* font-family: Aeonik TRIAL; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.304px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .defaultBrowser-text-container-wrapper {
+    padding-left: 0px;
+  }
+}

@@ -1,0 +1,107 @@
+.login-page-main-container {
+  position: relative;
+  background-color: var(--background, #121212);
+  height: 100vh;
+  overflow: hidden;
+}
+.login-page-side-design {
+  position: absolute;
+  top: -200px;
+  z-index: 0;
+  left: 0;
+  width: 335px;
+  height: 576px;
+  border-radius: 576px;
+  opacity: 0.4;
+  background: var(
+    --Bg-gradients-primary,
+    linear-gradient(180deg, #f4f85a 0%, #feffcf 100%)
+  );
+  filter: blur(100px);
+}
+
+.custom-input-margin {
+  margin-bottom: 20px;
+}
+
+.login-custom-input {
+  width: 298px !important;
+  padding: 16px 12px 16px 12px !important;
+}
+
+.login-heading {
+  /* font-family: Aeonik TRIAL; */
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: -0.8px;
+  color: #fffff5;
+}
+
+.login-field-container {
+  margin-top: 56px;
+}
+
+.login-underlined-text {
+  color: var(--fonts-icons-02, var(--text-02, #a3a393));
+  /* font-family: Aeonik TRIAL; */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  text-decoration-line: underline;
+  width: 298px;
+  padding-bottom: 56px;
+}
+
+.login-button {
+  display: flex;
+  width: 167px;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 16px;
+  background: var(--Primary, #f4f85a);
+  /* font-family: Aeonik TRIAL; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: -0.304px;
+  color: #121212;
+  cursor: pointer;
+}
+.login-button-container {
+  display: flex;
+
+  justify-content: center;
+}
+
+.login-tooltip-trigger-text {
+  display: flex;
+  width: 0px;
+  height: 0px;
+  margin-left: 4px;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 10px; */
+  border-radius: 100px;
+  border: 1px solid var(--Borders-01, #2d2d2d);
+  background: var(--fill-2, #2d2d2d);
+}
+.login-page-right-side-design {
+  position: absolute;
+  right: -110px;
+  bottom: -120px;
+  width: 482px;
+  height: 482px;
+  transform: rotate(90deg);
+  fill: rgba(255, 255, 255, 0.01);
+  stroke-width: 1px;
+  stroke: #fff;
+  backdrop-filter: blur(32px);
+  /* background-image: url("https://picsum.photos/200/300"); */
+}
