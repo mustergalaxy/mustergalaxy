@@ -78,9 +78,11 @@ const LoginPage = () => {
                   <Field name="accessKey">
                     {({ field }) => (
                       <CustomInput
+                        // index="1"
                         {...field}
                         placeholder="Access key"
                         style={{ ...styles.inputfield }}
+                        // password
                       />
                     )}
                   </Field>
@@ -118,7 +120,9 @@ const LoginPage = () => {
           )}
         </Formik>
       </div>
-      <div className="login-page-right-side-design"></div>
+      <div className="login-page-right-side-design">
+        <img src={assetsImage.loginRightSideDesign} alt=" side design " />
+      </div>
       {/* </div> */}
     </div>
   );

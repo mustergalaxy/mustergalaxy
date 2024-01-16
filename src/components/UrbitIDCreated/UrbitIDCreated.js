@@ -9,7 +9,7 @@ const UrbitIDCreated = () => {
       <div>
         <Sidebar />
       </div>
-      <div style={{ paddingLeft: "298px" }}>
+      <div className="UrbitIDCreated-text-main-container">
         <div className="UrbitIDCreated-text-container">
           <div>
             <img src={assetsImage.musterIcon} alt="muster icon" />

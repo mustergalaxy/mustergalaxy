@@ -1,8 +1,5 @@
 import * as React from "react";
-import {
-  createBrowserRouter,
-
-} from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import OnbordingPage from "../pages/Onbording/OnbordingPage";
 import NftComponent from "../pages/Nft/NftComponent";
 import Test from "../components/test/test";
@@ -20,11 +17,20 @@ import SetupWallet from "../components/SetupWallet/SetupWallet";
 import SignUrbit from "../pages/SignUrbit/SignUrbit";
 import SignupEmailPage from "../pages/SignupEmail/SignupEmailPage";
 import ProviderPage from "../pages/Provider/ProviderPage";
+import DefaultBrowser from "../components/DefaultBrowser/DefaultBrowser";
+import ImportedWalletSuccessful from "../components/ImportedWalletSuccessful/ImportedWalletSuccessful";
+import CreateWalletSuccessful from "../components/CreateWalletSuccessFul/CreateWalletSuccessful";
+import CreateWalletPassword from "../components/CreateWalletPassword/CreateWalletPassword";
+
+import UnsupportedBlockChainModal from "../components/UnsupportedBlockChainModal/UnsupportedBlockChainModal";
+import ImportedWalletSeed from "../components/ImportWalletSeed.js/ImportWalletSeed";
+import BackupSeedPhrase from "../components/BackupSeedPhrase/BackupSeedPhrase";
+import AccountSuccessfullyConnected from "../components/AccountSuccessfullyConnected/AccountSuccessfullyConnected";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <OnbordingPage /> ,
+    element: <OnbordingPage />,
   },
   // {
   //   path: "/login",
@@ -39,53 +45,84 @@ const router = createBrowserRouter([
   //       element: <Test />,
   //     },
   //   ],
-  
+
   // },
   {
     path: "/nft",
-    element: <NftComponent /> ,
+    element: <NftComponent />,
   },
   {
     path: "/signup",
-    element: <SignUp /> ,
+    element: <SignUp />,
   },
   {
     path: "/signupUrbit",
-    element: <SignUrbit /> ,
+    element: <SignUrbit />,
   },
   {
     path: "/sidebar",
-    element: <Sidebar /> ,
+    element: <Sidebar />,
   },
   {
-    path:'/loginpage',
-    element:<LoginPage/>
+    path: "/loginpage",
+    element: <LoginPage />,
   },
   {
-    path:'/signupEmail',
-    element: <SignupEmailPage/>
+    path: "/signupEmail",
+    element: <SignupEmailPage />,
   },
   {
-    path:'/test',
-    element: <Test/>
+    path: "/test",
+    element: <Test />,
   },
   {
-    path:'/provider',
-    element: <ProviderPage/>
+    path: "/provider",
+    element: <ProviderPage />,
   },
   {
-    path:'/providerIframe',
-    element:<ProviderIframe/>
+    path: "/providerIframe",
+    element: <ProviderIframe />,
   },
   {
-    path: '/urbitidcreated',
-    element: <UrbitIDCreated/>
+    path: "/urbitidcreated",
+    element: <UrbitIDCreated />,
   },
   {
-    path:'setupwallet',
-    element: <SetupWallet/>
-  }
-]
-);
- 
+    path: "setupwallet",
+    element: <SetupWallet />,
+  },
+  {
+    path: "defaultbrowser",
+    element: <DefaultBrowser />,
+  },
+  {
+    path: "ImportwalletSuccessful",
+    element: <ImportedWalletSuccessful />,
+  },
+  {
+    path: "createwalletSuccessful",
+    element: <CreateWalletSuccessful />,
+  },
+  {
+    path: "createwalletpassword",
+    element: <CreateWalletPassword />,
+  },
+  {
+    path: "unsupportedBlockChainModal",
+    element: <UnsupportedBlockChainModal />,
+  },
+  {
+    path: "importwalletseed",
+    element: <ImportedWalletSeed />,
+  },
+  {
+    path: "backupseedphrase",
+    element: <BackupSeedPhrase />,
+  },
+  {
+    path: "accountSuccessfullyConnected",
+    element: <AccountSuccessfullyConnected />,
+  },
+]);
+
 export default router;
