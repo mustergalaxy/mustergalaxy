@@ -1,10 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import assetsImage from "../../assets";
 import Sidebar from "../Sidebar/Sidebar";
 
 import "./ImportedWalletSuccessful.css";
 
 const ImportedWalletSuccessful = () => {
+  const navigate = useNavigate();
   return (
     <div className="ImportedWalletSuccessfull-main-comntainer">
       <div className="ImportedWalletSuccessfull-side-ellipse"></div>
@@ -19,7 +21,12 @@ const ImportedWalletSuccessful = () => {
           All set, you successfully imported your wallet!
         </div>
         <div>
-          <button className="ImportedWalletSuccessfull-button">Continue</button>
+          <button
+            onClick={() => navigate("/defaultbrowser")}
+            className="ImportedWalletSuccessfull-button"
+          >
+            Continue
+          </button>
         </div>
       </div>
       <div className="ImportedWalletSuccessfull-rightbottom-side-ellipse"></div>

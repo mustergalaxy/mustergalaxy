@@ -1,15 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-import SignUPImage from "../../assets/Login-page-image.png";
 import assetsImage from "../../assets";
 import "./SignUpPage.css";
-import { useNavigate } from "react-router-dom";
 
 const SignUpPage = () => {
   const navigate = useNavigate();
 
   const signUpEmail = () => {
-    navigate("/signupEmail"); // Replace '/path-to-redirect' with your desired path
+    navigate("/signupEmail");
   };
 
   const signUpOrbit = () => {

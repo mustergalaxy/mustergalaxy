@@ -1,14 +1,17 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
 import CustomInput from "../customInput/CustomInput";
-import { styles } from "./SignupUrbit.styles";
-import "./SignupUrbit.css";
 import CustomTooltip from "../../components/CustomToolTip/CustomToolTip";
 import Sidebar from "../Sidebar/Sidebar";
+import { styles } from "./SignupUrbit.styles";
 
 import assetsImage from "../../assets";
+import "./SignupUrbit.css";
 
 const SignupUrbitID = () => {
+  const navigate = useNavigate();
+
   const [checked, setChecked] = useState(false);
 
   return (
@@ -100,6 +103,7 @@ const SignupUrbitID = () => {
                     }
                     type="submit"
                     disabled={isSubmitting || !checked}
+                    onClick={() => navigate("/provider")}
                   >
                     Connect
                   </button>
@@ -108,6 +112,9 @@ const SignupUrbitID = () => {
             </Form>
           )}
         </Formik>
+      </div>
+      <div className="sign-urbit-right-side-design">
+        <img src={assetsImage.loginRightSideDesign} alt=" side design " />
       </div>
     </div>
   );

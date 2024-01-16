@@ -2,17 +2,16 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./OnBordingPage.css";
-// import OnbordingImage from '../../assets/Login-page-image.png'
-// import Loginpageimage from '../../assets';
 import assetsImage from "../../assets";
+
 const OnbordingPage = () => {
   const navigate = useNavigate();
 
   const signUpPage = () => {
-    navigate("/signup"); // Replace '/path-to-redirect' with your desired path
+    navigate("/signup");
   };
   const loginPage = () => {
-    navigate("/loginPage"); // Replace '/path-to-redirect' with your desired path
+    navigate("/loginPage");
   };
   return (
     <div className="onBording-page-main-container">

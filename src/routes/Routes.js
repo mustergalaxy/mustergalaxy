@@ -3,13 +3,9 @@ import { createBrowserRouter } from "react-router-dom";
 import OnbordingPage from "../pages/Onbording/OnbordingPage";
 import NftComponent from "../pages/Nft/NftComponent";
 import Test from "../components/test/test";
-// import LayoutComponent from "../LayoutComponent";
 import SignUp from "../pages/SignUp/SignUpPage";
-// import SignupUrbitID from "../components/signupUrbitID/SignupUrbitID";
 import Sidebar from "../components/Sidebar/Sidebar";
 import LoginPage from "../pages/LoginPage/LoginPage";
-// import SignupEmail from "../components/SignupEmail/SignupEmail";
-// import Provider from "../components/Provider/Provider";
 import ProviderIframe from "../components/ProviderIframe/ProviderIframe";
 import UrbitIDCreated from "../components/UrbitIDCreated/UrbitIDCreated";
 import SetupWallet from "../components/SetupWallet/SetupWallet";
@@ -26,6 +22,7 @@ import UnsupportedBlockChainModal from "../components/UnsupportedBlockChainModal
 import ImportedWalletSeed from "../components/ImportWalletSeed.js/ImportWalletSeed";
 import BackupSeedPhrase from "../components/BackupSeedPhrase/BackupSeedPhrase";
 import AccountSuccessfullyConnected from "../components/AccountSuccessfullyConnected/AccountSuccessfullyConnected";
+import VerifySeedPhrase from "../components/VerifySeedPhrase/VerifySeedPhrase";
 
 const router = createBrowserRouter([
   {
@@ -122,6 +119,10 @@ const router = createBrowserRouter([
   {
     path: "accountSuccessfullyConnected",
     element: <AccountSuccessfullyConnected />,
+  },
+  {
+    path: "verifyseedphrase",
+    element: <VerifySeedPhrase />,
   },
 ]);
 

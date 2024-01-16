@@ -1,8 +1,8 @@
-.ImportWalletSeed-main-comntainer {
+.verifySeedPhrase-main-comntainer {
   background: var(--background, #121212);
 }
 
-.ImportWalletSeed-side-ellipse {
+.verifySeedPhrase-side-ellipse {
   width: 335px;
   height: 376px;
   flex-shrink: 0;
@@ -17,9 +17,8 @@
   z-index: 0;
 }
 
-.ImportWalletSeed-text-container-wrapper {
+.verifySeedPhrase-text-container-wrapper {
   position: relative;
-  /* top: -30px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +27,7 @@
   padding-left: 289px;
 }
 
-.ImportWalletSeed-main-heading {
+.verifySeedPhrase-main-heading {
   color: var(--fonts-icons-01, var(--text-01, #fffff5));
   text-align: center;
   /* font-family: Aeonik TRIAL; */
@@ -41,24 +40,7 @@
   padding: 16px 0px;
 }
 
-.ImportedWalletSeedToggleMainContainer {
-  width: 640px;
-  display: flex;
-  gap: 16px;
-  justify-content: left;
-}
-
-.ImportedWalletSeedToggle {
-  display: flex;
-  padding: 8px 16px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 16px;
-  border: 1px solid var(--fonts-icons-01, #fffff5);
-}
-
-.ImportWalletSeed-text {
+.verifySeedPhrase-text {
   color: var(--fonts-icons-02, var(--text-02, #a3a393));
   text-align: center;
   /* font-family: Aeonik TRIAL; */
@@ -68,10 +50,9 @@
   line-height: 120%;
   letter-spacing: -0.304px;
   max-width: 591px;
-  padding-bottom: 24px;
 }
 
-.ImportWalletSeed-rightbottom-side-ellipse {
+.verifySeedPhrase-rightbottom-side-ellipse {
   position: absolute;
   width: 204px;
   height: 205px;
@@ -87,7 +68,7 @@
   background-color: #f4f85a;
 }
 
-.ImportWalletSeed-button {
+.verifySeedPhrase-button {
   display: flex;
   width: 167px;
   padding: 12px 24px;
@@ -104,19 +85,8 @@
   line-height: 120%;
   letter-spacing: -0.304px;
 }
-.ImportWalletSeedButtonUnderText {
-  color: var(--fonts-icons-01, var(--text-01, #fffff5));
-  /* font-family: Aeonik TRIAL; */
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%;
-  letter-spacing: -0.24px;
-  text-decoration-line: underline;
-  padding: 24px 0px;
-}
 @media screen and (max-width: 900px) {
-  .ImportWalletSeed-text-container-wrapper {
+  .verifySeedPhrase-text-container-wrapper {
     padding-left: 0px;
   }
 }

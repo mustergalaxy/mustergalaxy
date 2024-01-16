@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import assetsImage from "../../assets";
 import Sidebar from "../Sidebar/Sidebar";
 import CustomInput from "../customInput/CustomInput";
@@ -9,15 +10,18 @@ import "./ImportWalletSeed.css";
 const ImportedWalletSeed = () => {
   const [isToggled, setIsToggled] = useState(true);
   const [numOfInputs, setNumOfInputs] = useState(12);
-  // const [isHidden, setIsHidden] = useState(true);
 
-  // Function to turn the toggle on
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/createwalletpassword", { state: { icon: " " } });
+  };
+
   const handle12Words = () => {
     setIsToggled(true);
     setNumOfInputs(12);
   };
 
-  // Function to turn the toggle off
   const handle24Words = () => {
     setIsToggled(false);
     setNumOfInputs(24);
@@ -25,19 +29,7 @@ const ImportedWalletSeed = () => {
 
   const inputElements = [...Array(numOfInputs)].map((_, index) => (
     <div key={index}>
-      {/* <input
-        style={{ border: "2px solid red" }}
-        type="text"
-        className="ImportWalletSeed-input"
-        placeholder={`Word #${index + 1}`}
-      /> */}
-      <CustomInput
-        index={index + 1}
-        // placeholder="Access key"
-        style={{ ...styles.inputfield }}
-        // type={isHidden ? "password" : "text"}
-        // password
-      />
+      <CustomInput index={index + 1} style={{ ...styles.inputfield }} />
     </div>
   ));
 
@@ -101,7 +93,9 @@ const ImportedWalletSeed = () => {
           {inputElements}
         </div>
         <div>
-          <button className="ImportWalletSeed-button">Continue</button>
+          <button onClick={handleClick} className="ImportWalletSeed-button">
+            Continue
+          </button>
         </div>
         <div className="ImportWalletSeedButtonUnderText">
           Dismiss, I’ll create a Muster wallet

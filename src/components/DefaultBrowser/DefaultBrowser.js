@@ -35,7 +35,7 @@ const DefaultBrowser = () => {
         >
           <div className="defaultDrowser-checkbox-container">
             <img
-              onClick={() => setChecked(!checked)}
+              onClick={() => setChecked(true)}
               src={
                 checked
                   ? assetsImage.filledCheckBox
@@ -47,7 +47,7 @@ const DefaultBrowser = () => {
           </div>
           <div className="defaultDrowser-checkbox-container">
             <img
-              onClick={() => setChecked(!checked)}
+              onClick={() => setChecked(false)}
               src={
                 checked
                   ? assetsImage.outlinedCheckBox

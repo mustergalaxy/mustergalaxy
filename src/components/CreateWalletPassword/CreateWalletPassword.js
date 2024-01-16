@@ -4,12 +4,22 @@ import Sidebar from "../Sidebar/Sidebar";
 import CustomInput from "../customInput";
 import { Formik, Form, Field } from "formik";
 import { styles } from "./CreateWalletStyles";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import "./CreateWalletPassword.css";
 
-// import "./ImportedWalletSuccessful.css";
-
 const CreateWalletPassword = () => {
+  const location = useLocation();
+  const { icon } = location?.state;
+  console.log("icon==>", icon);
+
+  const navigate = useNavigate();
+
+  function handleClick() {
+    icon === "musterIcon"
+      ? navigate("/backupseedphrase")
+      : navigate("/ImportwalletSuccessful");
+  }
   return (
     <div className="createWalletPassword-main-comntainer">
       <div className="createWalletPassword-side-ellipse"></div>
@@ -31,6 +41,7 @@ const CreateWalletPassword = () => {
           initialValues={{ password: "", reenterpassword: "" }}
           onSubmit={(values, { setSubmitting, resetForm }) => {
             console.log(values);
+            handleClick();
             setTimeout(() => {
               resetForm();
               setSubmitting(false);
@@ -41,7 +52,7 @@ const CreateWalletPassword = () => {
             <Form>
               <div className="create-Wallet-field-container">
                 <div style={{ marginBottom: "8px" }}>
-                  <Field name="urbitID">
+                  <Field name="password">
                     {({ field }) => (
                       <CustomInput
                         {...field}
@@ -65,7 +76,7 @@ const CreateWalletPassword = () => {
                   </div>
                 </div>
                 <div>
-                  <Field name="accessKey">
+                  <Field name="reenterpassword">
                     {({ field }) => (
                       <CustomInput
                         {...field}
@@ -92,10 +103,6 @@ const CreateWalletPassword = () => {
             </Form>
           )}
         </Formik>
-
-        {/* <div>
-          <button className="createWalletPassword-button">Continue</button>
-        </div> */}
       </div>
       <div className="createWalletPassword-rightbottom-side-ellipse"></div>
     </div>

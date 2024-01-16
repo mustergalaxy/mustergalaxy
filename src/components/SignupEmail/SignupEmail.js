@@ -1,14 +1,16 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
-// import CustomInput from "../customInput/CustomInput";
 import CustomInput from "../customInput";
+import Sidebar from "../Sidebar/Sidebar";
 import { styles } from "../signupUrbitID/SignupUrbit.styles";
+
 import "./SignupEmail.css";
 import assetsImage from "../../assets";
-// import "./SignupUrbit.css";
-import Sidebar from "../Sidebar/Sidebar";
 
 const SignupEmail = () => {
+  const navigate = useNavigate();
+
   const [checked, setChecked] = useState(false);
 
   return (
@@ -104,6 +106,7 @@ const SignupEmail = () => {
                     }
                     type="submit"
                     disabled={isSubmitting || !checked}
+                    onClick={() => navigate("/provider")}
                   >
                     Connect
                   </button>
