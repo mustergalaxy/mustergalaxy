@@ -31,7 +31,9 @@ const SignupUrbitID = () => {
           initialValues={{ urbitID: "", accessKey: "" }}
           onSubmit={(values, { setSubmitting, resetForm }) => {
             setTimeout(() => {
+              navigate("/setupwallet");
               resetForm();
+
               setSubmitting(false);
             }, 1000);
           }}
@@ -103,7 +105,6 @@ const SignupUrbitID = () => {
                     }
                     type="submit"
                     disabled={isSubmitting || !checked}
-                    onClick={() => navigate("/provider")}
                   >
                     Connect
                   </button>
