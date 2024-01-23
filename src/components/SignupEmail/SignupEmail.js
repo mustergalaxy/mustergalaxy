@@ -106,7 +106,7 @@ const SignupEmail = () => {
                     }
                     type="submit"
                     disabled={isSubmitting || !checked}
-                    onClick={() => navigate("/provider")}
+                    onClick={() => navigate("/setupwallet")}
                   >
                     Connect
                   </button>
