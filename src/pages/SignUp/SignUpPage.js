@@ -49,7 +49,14 @@ const SignUpPage = () => {
               Try Muster
             </button>
           </div>
-          <span id="signUp-page-underLine-text">get an Urbit ID</span>
+          <span
+            id="signUp-page-underLine-text"
+            onClick={() => {
+              navigate("/provider");
+            }}
+          >
+            Get an Urbit ID
+          </span>
         </div>
         <div id="signUp-page-bottom-text">Why do I need an Urbit ID ?</div>
         <div className="singnup-page-ellipsis"></div>
