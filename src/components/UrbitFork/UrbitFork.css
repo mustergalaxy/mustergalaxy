@@ -1,0 +1,85 @@
+.urbitForkMainComponent {
+  background: var(--background, #121212);
+  height: 100%;
+  width: 100wh;
+  color: #fffff5;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.urbitForkSideEllipse {
+  fill: var(
+    --Element-fills-active,
+    linear-gradient(94deg, #f4f85a 24.67%, #cdcdcd 87.64%)
+  );
+  opacity: 0.3;
+  filter: blur(250px);
+  /* position: absolute; */
+  position: absolute;
+  width: 469px;
+  height: 469px;
+  flex-shrink: 0;
+  background-color: #f4f85a;
+  top: -200px;
+  left: -170px;
+}
+
+.urbitForkcontentContainer {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 63px;
+}
+
+.urbitForkContentHeading {
+  color: var(--fonts-icons-01, #fffff5);
+
+  /* Onboarding/Titles/H1 Reg 40 - 120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 48px */
+  letter-spacing: -0.8px;
+}
+
+.urbitForkImageBottomText {
+  font-size: 20px;
+}
+
+.urbitForkClosedSiteName {
+  color: var(--fonts-icons-01, #fffff5);
+  text-align: center;
+
+  /* Onboarding/Body/Body XL - Reg 20-120 */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 24px */
+  letter-spacing: -0.4px;
+}
+
+.urbitForkClosedIcon {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 100px;
+  background: black;
+}
+
+.urbitForkRightTopText {
+  color: var(--fonts-icons-01, #fffff5);
+
+  /* Onboarding/Titles/H2 Reg 24 - 120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 36px */
+  letter-spacing: -0.456px;
+}

@@ -14,6 +14,16 @@ import copy from "./copy.svg";
 import exclamatoryIcon from "./exclamatoryIcon.svg";
 import loginSideDesign from "./loginSideDesign.jpeg";
 import loginRightSideDesign from "./loginRightSideDesign.svg";
+import siteIcon from "./siteIcon.svg";
+import editPencile from "./editPencile.svg";
+import muterText from "./musterText.svg";
+import messageIcon from "./messageIcon.svg";
+import sigilGenerator from "./sigilGenerator.png";
+import facebookIcon from "./facebookIcon.svg";
+import urbitforkGroup from "./urbitforkGroup.png";
+import facebookIndianFork from "./facebookIndianFork.svg";
+import expandIcon from "./expandIcon.svg";
+import urbitIndianForkbottomIcon from "./urbitIndianForkbottomIcon.svg";
 
 const assetsImage = {
   Loginpageimage,
@@ -31,5 +41,15 @@ const assetsImage = {
   exclamatoryIcon,
   loginSideDesign,
   loginRightSideDesign,
+  siteIcon,
+  editPencile,
+  muterText,
+  messageIcon,
+  sigilGenerator,
+  facebookIcon,
+  urbitforkGroup,
+  facebookIndianFork,
+  expandIcon,
+  urbitIndianForkbottomIcon,
 };
 export default assetsImage;
