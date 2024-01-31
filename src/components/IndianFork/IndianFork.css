@@ -1,0 +1,84 @@
+.indianForkMainComponent {
+  background: var(--background, #121212);
+  height: 100%;
+  width: 100wh;
+  color: #fffff5;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.indianForkSideEllipse {
+  fill: var(
+    --Element-fills-active,
+    linear-gradient(94deg, #f4f85a 24.67%, #cdcdcd 87.64%)
+  );
+  opacity: 0.3;
+  filter: blur(250px);
+  /* position: absolute; */
+  position: absolute;
+  width: 469px;
+  height: 469px;
+  flex-shrink: 0;
+  background-color: #f4f85a;
+  top: -200px;
+  left: -170px;
+}
+
+.indianForkcontentContainer {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 83px;
+}
+
+.indianForkContentHeading {
+  color: var(--fonts-icons-01, #fffff5);
+
+  /* Onboarding/Titles/H1 Reg 40 - 120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 48px */
+  letter-spacing: -0.8px;
+}
+
+.indianForkImageBottomText {
+  font-size: 20px;
+}
+
+.indianForkClosedSiteName {
+  color: var(--fonts-icons-01, #fffff5);
+  text-align: center;
+
+  /* Onboarding/Body/Body XL - Reg 20-120 */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 24px */
+  letter-spacing: -0.4px;
+}
+.indianForkClosedTime {
+  color: var(--fonts-icons-02, var(--text-02, #a3a393));
+  text-align: center;
+
+  /* Onboarding/Body/Body L Reg 16 - 120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  /* line-height: 120%;  */
+  letter-spacing: -0.304px;
+}
+.indianForkClosedIcon {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 100px;
+  background: black;
+}

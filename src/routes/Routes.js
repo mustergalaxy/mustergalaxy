@@ -22,6 +22,8 @@ import ImportedWalletSeed from "../components/ImportWalletSeed.js/ImportWalletSe
 import BackupSeedPhrase from "../components/BackupSeedPhrase/BackupSeedPhrase";
 import AccountSuccessfullyConnected from "../components/AccountSuccessfullyConnected/AccountSuccessfullyConnected";
 import VerifySeedPhrase from "../components/VerifySeedPhrase/VerifySeedPhrase";
+import IndianFork from "../components/IndianFork/IndianFork";
+import UrbitFork from "../components/UrbitFork/UrbitFork";
 
 const router = createBrowserRouter([
   {
@@ -118,6 +120,14 @@ const router = createBrowserRouter([
   {
     path: "verifyseedphrase",
     element: <VerifySeedPhrase />,
+  },
+  {
+    path: "indianFork",
+    element: <IndianFork />,
+  },
+  {
+    path: "urbitFork",
+    element: <UrbitFork />,
   },
 ]);
 
