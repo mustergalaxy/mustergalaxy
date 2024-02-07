@@ -47,7 +47,15 @@ body {
 }
 
 .urbitForkImageBottomText {
-  font-size: 20px;
+  color: var(--fonts-icons-01, var(--text-01, #fffff5));
+
+  /* Onboarding/Details/Details Reg 12 - 120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 14.4px */
+  letter-spacing: -0.24px;
 }
 
 .urbitForkClosedSiteName {
