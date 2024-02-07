@@ -1,0 +1,141 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Ensure at least full viewport height */
+  /* position: relative; */
+  /* overflow: hidden; Optional: Prevent scrolling if the content fits */
+}
+.urbitForkMainComponent {
+  background: #121212;
+  height: 100%;
+  width: 100%;
+  color: #fffff5;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.urbitForkSideEllipse {
+  opacity: 0.3;
+  filter: blur(250px);
+  position: absolute;
+  width: 469px;
+  height: 469px;
+  background-color: #f4f85a;
+  top: -200px;
+  left: -170px;
+}
+
+.urbitForkcontentContainer {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.urbitForkContentHeading {
+  color: var(--fonts-icons-01, var(--text-01, #fffff5));
+  /* text-align: center; */
+
+  /* Onboarding/Titles/H2 Reg 24 - 120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 36px */
+  letter-spacing: -0.456px;
+}
+
+.urbitForkImageBottomText {
+  font-size: 20px;
+}
+
+.urbitForkClosedSiteName {
+  color: #fffff5;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.4px;
+}
+
+.urbitForkClosedIcon {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: black;
+}
+
+.urbitForkRightTopText {
+  color: var(--fonts-icons-01, var(--text-01, #fffff5));
+
+  /* Onboarding/Body/Body XL - Reg 20-120 */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 24px */
+  letter-spacing: -0.4px;
+}
+
+.topLeftContainer {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  color: wheat;
+  display: flex;
+  gap: 20px;
+}
+
+.iconsContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.iconPadding {
+  padding-left: 10px;
+}
+
+.topRightContainer {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.contentArea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0px;
+}
+
+.bottomRightIcon {
+  position: absolute;
+  bottom: 0px;
+  right: 15px;
+}
+#bookmark {
+  display: flex;
+  gap: 8px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.palText {
+  color: var(--fonts-icons-01, var(--text-01, #fffff5));
+  /* text-align: center; */
+
+  /* Onboarding/Body/Body XL - Reg 20-120 */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 24px */
+  letter-spacing: -0.4px;
+}
