@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UrbitFork</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="urbitForkMainComponent">
+      <div class="topLeftContainer">
+        <div class="iconsContainer">
+          <img class="iconPadding" src="assets/musterIcon.svg" alt="icon" />
+        </div>
+        <div>
+          <img class="iconPadding" src="assets/musterText.svg" alt="icon" />
+        </div>
+      </div>
+      <div class="topRightContainer">
+        <img src="assets/sigilGenerator.png" alt="img" />
+        <div class="urbitForkRightTopText">~davwyd-sordem</div>
+      </div>
+      <div class="urbitForkSideEllipse"></div>
+      <div
+        style="
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          width: 100%;
+          min-height: 100vh;
+          padding: 100px 0px;
+        "
+      >
+        <div class="urbitForkcontentContainer">
+          <div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 0px 16px 0px;
+              "
+            >
+              <div class="urbitForkContentHeading">Bookmarks</div>
+              <div>
+                <!-- The 'assetsImage.editPencile' variable needs to be replaced with the actual path to your image -->
+                <img src="assets/editPencile.svg" alt="Edit" />
+              </div>
+            </div>
+            <div>
+              <div id="bookmark"></div>
+            </div>
+          </div>
+
+          <!-- favorate app -->
+          <div>
+            <div style="padding: 0px 0px 16px 0px">
+              <div class="urbitForkContentHeading">Favourite apps</div>
+            </div>
+            <div>
+              <!-- Additional content will go here -->
+              <div
+                style="
+                  display: flex;
+                  gap: 16px;
+                  text-align: center;
+                  flex-wrap: wrap;
+                "
+                id="favorateApp"
+              ></div>
+            </div>
+          </div>
+
+          <!-- groups -->
+          <div>
+            <div style="padding: 0px 0px 16px 0px">
+              <div class="urbitForkContentHeading">Favourite Groups</div>
+            </div>
+            <div>
+              <!-- Additional content will go here -->
+              <div
+                style="
+                  display: flex;
+                  gap: 16px;
+                  text-align: center;
+                  flex-wrap: wrap;
+                "
+                id="favorateGroup"
+              ></div>
+            </div>
+          </div>
+
+          <!-- hostedgroups -->
+          <div>
+            <div style="padding: 0px 0px 16px 0px">
+              <div class="urbitForkContentHeading">Favourite Groups</div>
+            </div>
+            <div>
+              <!-- Additional content will go here -->
+              <div
+                style="
+                  display: flex;
+                  gap: 16px;
+                  text-align: center;
+                  flex-wrap: wrap;
+                "
+                id="hostedGroup"
+              ></div>
+            </div>
+          </div>
+
+          <!-- recently closed -->
+          <div style="display: flex; flex-direction: column; gap: 16px">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div class="urbitForkContentHeading">Recently Closed Tabs</div>
+              <div>
+                <img
+                  width="32"
+                  height="32"
+                  src="assets/expandIcon.svg"
+                  alt="icon"
+                />
+                <!-- Replace path_to_expand_icon_image with the actual path to the expand icon image -->
+              </div>
+            </div>
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 8px;
+              "
+              id="createRecentlyClose"
+            >
+              <!-- Content will go here -->
+            </div>
+          </div>
+          <!-- end of recently closed -->
+        </div>
+      </div>
+      <div class="bottomRightIcon">
+        <img src="assets/urbitIndianForkbottomIcon.svg" alt="img" />
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

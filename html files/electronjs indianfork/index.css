@@ -1,0 +1,231 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Ensure at least full viewport height */
+  position: relative;
+  /* overflow: hidden; */
+}
+.indianForkMainComponent {
+  background: #121212;
+  min-height: 100vh;
+  width: 100%;
+  color: #fffff5;
+  position: relative;
+  overflow-x: hidden;
+  position: relative; /* This is necessary for absolute children positioning */
+  padding-bottom: 100px;
+
+  /* padding: 100px 0; */
+}
+
+.indianForkSideEllipse {
+  opacity: 0.3;
+  filter: blur(250px);
+  position: absolute;
+  width: 469px;
+  height: 469px;
+  background-color: #f4f85a;
+  top: -200px;
+  left: -170px;
+}
+
+.indianForkcontentContainer {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.indianForkContentHeading {
+  color: var(--fonts-icons-01, var(--text-01, #fffff5));
+
+  /* Onboarding/Titles/H2 Reg 24 - 120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 36px */
+  letter-spacing: -0.456px;
+}
+
+.indianForkImageBottomText {
+  color: var(--fonts-icons-01, var(--text-01, #fffff5));
+
+  /* Onboarding/Details/Details Reg 12 - 120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 14.4px */
+  letter-spacing: -0.24px;
+}
+
+.indianForkClosedSiteName {
+  color: var(--fonts-icons-01, var(--text-01, #fffff5));
+  /* text-align: center; */
+
+  /* Onboarding/Body/Body L Reg 16 - 120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: -0.304px;
+}
+
+.indianForkClosedTime {
+  color: var(--fonts-icons-02, var(--text-02, #a3a393));
+  /* text-align: center; */
+
+  /* Onboarding/Details/Details Reg 12 - 120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 14.4px */
+  letter-spacing: -0.24px;
+}
+
+.indianForkClosedIcon {
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: black;
+}
+
+.indianForkRightTopText {
+  color: #fffff5;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.456px;
+}
+
+.topLeftContainer {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  color: wheat;
+  display: flex;
+  gap: 20px;
+  padding-bottom: 100px;
+}
+
+.iconsContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.iconPadding {
+  padding-left: 10px;
+}
+
+.topRightContainer {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.contentArea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0px;
+}
+
+.bottomRightIcon {
+  position: absolute;
+  bottom: 0px;
+  right: 15px;
+}
+.bottomleftIcon {
+  position: absolute;
+  bottom: 0px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.bottomleftIconText {
+  color: var(--fonts-icons-01, var(--text-01, #fffff5));
+
+  /* Onboarding/Body/Body L Reg 16 - 120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: -0.304px;
+}
+#bookmark {
+  display: flex;
+  gap: 8px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+/* search */
+
+.search-container {
+  position: relative;
+  width: 100%;
+  /* padding: 16px 10px; */
+}
+
+.search-input {
+  width: 100%;
+  padding: 16px 45px;
+  font-size: 16px;
+  /* border: 1px solid #ccc; */
+  border-radius: 25px;
+  border: none;
+  outline: none;
+
+  /* text-align: center; */
+
+  /* Onboarding/Body/Body L Reg 16 - 120% */
+  /* font-family: "Aeonik TRIAL"; */
+}
+
+.search-input::placeholder {
+  color: var(
+    --fonts-icons-03,
+    var(--fill-2, #2d2d2d)
+  ); /* Change this to your preferred placeholder color */
+  opacity: 1; /* For browsers that do not support the color property */
+  color: var(--fonts-icons-03, var(--fill-2, #2d2d2d));
+  /* text-align: center; */
+  /* Onboarding/Body/Body L Reg 16 - 120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: -0.304px;
+}
+
+.search-icon-left,
+.search-icon-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.search-icon-left {
+  left: 16px;
+}
+
+.search-icon-right {
+  right: 16px;
+}
