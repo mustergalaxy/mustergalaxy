@@ -169,12 +169,12 @@
   font-weight: bold;
 }
 
-.close:hover,
+/* .close:hover,
 .close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
-}
+} */
 
 button {
   margin: 0 5px;
@@ -284,7 +284,7 @@ button {
   animation-duration: 0.4s;
 
   display: flex;
-  width: 533px;
+  width: 553px;
   padding: 40px;
   flex-direction: column;
   /* align-items: flex-start; */
@@ -303,12 +303,12 @@ button {
   cursor: pointer;
 }
 
-.certificateViewManageClose:hover,
+/* .certificateViewManageClose:hover,
 .certificateViewManageClose:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
-}
+} */
 
 .certificateViewManageHeader {
   display: flex;
@@ -323,7 +323,7 @@ button {
   align-items: flex-start;
 }
 
-.certificateViewManageButton {
+/* .certificateViewManageButton {
   display: flex;
   height: 54px;
   padding: 16px 24px;
@@ -333,8 +333,6 @@ button {
   border: 1px solid var(--Card-fills-02, #1e1e1e);
   text-align: justify;
 
-  /* Landing/Desktop/Body/Body S Reg 20-120% */
-  /* font-family: "Aeonik TRIAL"; */
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -347,9 +345,7 @@ button {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  /* Add more styles for the buttons */
-}
+} */
 
 .certificateViewManageBody {
   padding: 10px;
@@ -435,4 +431,60 @@ button {
   font-weight: 700;
   line-height: 120%; /* 19.2px */
   letter-spacing: -0.368px;
+}
+.button-selected {
+  display: flex;
+  height: 54px;
+  padding: 16px 24px;
+  align-items: center;
+  gap: 16px;
+  border-radius: 16px;
+  border: 1px solid var(--Card-fills-02, #1e1e1e);
+  text-align: justify;
+
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  background: var(
+    --Button-Hover,
+    linear-gradient(180deg, #f4f85a 0%, #feffcf 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button-unselected {
+  display: flex;
+  height: 54px;
+  padding: 16px 24px;
+  align-items: center;
+  gap: 16px;
+  border-radius: 16px;
+  border: 1px solid var(--Card-fills-02, #1e1e1e);
+  color: var(--fonts-icons-02, #a3a393);
+
+  /* Landing/Desktop/Body/Body S Reg 20-120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  background-color: #131313;
+}
+.Manage-certificate-heading {
+  width: 792px;
+  display: flex;
+  align-items: flex-start;
+  color: var(--fonts-icons-01, #fffff5);
+  text-align: center;
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 48px */
+  letter-spacing: -0.92px;
 }

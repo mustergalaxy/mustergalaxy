@@ -3,31 +3,31 @@ const manageData = [
     index: 1,
     organisation: "[Organization] ",
     validity: "24 august",
-    icon: "/assets/3dot.svg",
+    icon: "../../assets/3dot.svg",
   },
   {
     index: 2,
     organisation: "[Organization] ",
     validity: "24 august",
-    icon: "/assets/3dot.svg",
+    icon: "../../assets/3dot.svg",
   },
   {
     index: 3,
     organisation: "[Organization] ",
     validity: "24 august",
-    icon: "/assets/3dot.svg",
+    icon: "../../assets/3dot.svg",
   },
   {
     index: 4,
     organisation: "[Organization] ",
     validity: "24 august",
-    icon: "/assets/3dot.svg",
+    icon: "../../assets/3dot.svg",
   },
   {
     index: 5,
     organisation: "[Organization] ",
     validity: "24 august",
-    icon: "/assets/3dot.svg",
+    icon: "../../assets/3dot.svg",
   },
 ];
 
@@ -36,13 +36,27 @@ let currentlyOpenedBox = null;
 const container = document.getElementById("setDocument");
 
 function createCertificateViewModal() {
+  function resetButtonStyles() {
+    const buttons = document.querySelectorAll(".certificateViewManageButton");
+    buttons.forEach((button) => {
+      button.classList.remove("button-selected");
+      button.classList.add("button-unselected");
+    });
+  }
+
+  // Function to set a button as selected
+  function setSelectedButton(button) {
+    resetButtonStyles();
+    button.classList.add("button-selected");
+    button.classList.remove("button-unselected");
+  }
+
   const modal = document.createElement("div");
   modal.id = "certificateViewModal";
   modal.className = "certificateViewManageModal";
 
   const modalContent = document.createElement("div");
   modalContent.className = "certificateViewManageContent";
-  // modalContent.style.Height = "700px";
 
   const closeButton = document.createElement("span");
   closeButton.className = "certificateViewManageClose";
@@ -58,11 +72,10 @@ function createCertificateViewModal() {
   const modalLeftheading = document.createElement("div");
   modalLeftheading.style.display = "flex";
   const modalLogo = document.createElement("img");
-  modalLogo.src = "/assets/modalLogo.png"; // Replace with the path to your image
-  modalLogo.alt = "Logo"; // Alternative text for the image
-  modalLogo.className = "CertificateViewModalLogo"; // Add a class if you want to style it
-  modalLogo.style.marginRight = "10px"; // Add some space between the image and the text
-
+  modalLogo.src = "../../assets/modalLogo.png";
+  modalLogo.alt = "Logo";
+  modalLogo.className = "CertificateViewModalLogo";
+  modalLogo.style.marginRight = "10px";
   const modalTitle = document.createElement("div");
   modalTitle.textContent = "Certificate viewer";
   modalTitle.className = "CertificateViewModalHeading";
@@ -79,41 +92,23 @@ function createCertificateViewModal() {
   modalLeftheading.appendChild(modalLogo);
   modalLeftheading.appendChild(headingContainer);
 
-  // Add a class if you want to style it
-
-  // Append the additional text line to the modalLeftheading or modalHeader
-  // modalLeftheading.appendChild(additionalText);
-
-  // Append the logo image before the title
   modalHeader.appendChild(modalLeftheading);
-  // modalHeader.appendChild(additionalText);
   modalHeader.appendChild(closeButton);
-
-  // const modalTitle = document.createElement("div");
-  // modalTitle.textContent = "Certificate viewer";
-  // modalTitle.className = "CertificateViewModalHeading";
-
-  // modalHeader.appendChild(modalTitle);
-  // modalHeader.appendChild(closeButton);
 
   const buttonContainer = document.createElement("div");
   buttonContainer.className = "certificateViewManageButtonContainer";
 
   const button1 = document.createElement("button");
-  // button1.textContent = "Button 1";
   button1.className = "certificateViewManageButton";
   const buttonImage = document.createElement("img");
-  buttonImage.src = "/assets/generalLogo.svg"; // Replace with your image path
+  buttonImage.src = "../../assets/generalLogo.svg";
   buttonImage.alt = "Button Icon";
-  buttonImage.style.width = "20px"; // Set the width of the image
-  buttonImage.style.height = "20px"; // Set the height of the image
-  buttonImage.style.marginRight = "5px"; // Add some space between the image and the text
+  buttonImage.style.width = "24px";
+  buttonImage.style.height = "24px";
 
-  // Add image to the button
   button1.appendChild(buttonImage);
 
-  // Create a text node for the button text
-  const buttonText = document.createTextNode("General"); // Replace with your button text
+  const buttonText = document.createTextNode("General");
   button1.appendChild(buttonText);
   const certificates = [
     {
@@ -143,10 +138,11 @@ function createCertificateViewModal() {
   ];
 
   button1.onclick = function () {
+    setSelectedButton(button1);
     const modalBody = document.getElementById("certificateViewModalBody");
-    modalBody.innerHTML = ""; // Clear existing content
+    modalBody.innerHTML = "";
 
-    modalBody.style.height = "400px"; // Set the desired fixed height
+    modalBody.style.height = "500px";
     modalBody.style.overflowY = "auto";
     const styleSheet = document.createElement("style");
     styleSheet.type = "text/css";
@@ -176,24 +172,21 @@ function createCertificateViewModal() {
       ],
     }));
 
-    // Create each box with the updated data
     boxData.forEach((box, index) => {
       const dataContainer = document.createElement("div");
       dataContainer.className = "ManagecertificatemodaltextContainer";
-      dataContainer.style.marginBottom = "24px"; // Gap between boxes
+      dataContainer.style.marginBottom = "24px";
 
       const heading = document.createElement("div");
       heading.className = "ManagecertificateSubModalHeading";
       heading.textContent = box.heading;
-      heading.style.marginBottom = "16px"; // Gap after heading
+      heading.style.marginBottom = "16px";
 
       dataContainer.appendChild(heading);
 
-      // Create rows with a gap of 8px between them
       box.rows.forEach((rowData, rowIndex) => {
         const row = document.createElement("div");
         row.innerHTML = rowData;
-        // row.style.marginBottom = rowIndex < box.rows.length - 1 ? "8px" : "0"; // Gap after each row, except the last one
         dataContainer.appendChild(row);
       });
 
@@ -202,49 +195,101 @@ function createCertificateViewModal() {
   };
 
   const button2 = document.createElement("button");
-  button2.textContent = "Details";
+
   button2.className = "certificateViewManageButton";
+  const buttonImage2 = document.createElement("img");
+  buttonImage2.src = "../../assets/detailsunselected.svg";
+  buttonImage2.alt = "Button Icon";
+  buttonImage2.style.width = "24px";
+  buttonImage2.style.height = "24px";
 
-  // const button2Data = [
-  //   {
-  //     title: "Item 1",
-  //     description: "Description for Item 1",
-  //     additionalInfo: "Additional Info for Item 1",
-  //   },
-  //   {
-  //     title: "Item 2",
-  //     description: "Description for Item 2",
-  //     additionalInfo: "Additional Info for Item 2",
-  //   },
-  // ];
-  // button2.onclick = function () {
-  //   const modalBody = document.getElementById("certificateViewModalBody");
-  //   modalBody.innerHTML = "";
+  button2.appendChild(buttonImage2);
 
-  //   button2Data.forEach((item) => {
-  //     const dataContainer = document.createElement("div");
-  //     dataContainer.className = "ManagecertificatemodaltextContainer";
-  //     dataContainer.style.marginBottom = "24px";
+  const buttonText2 = document.createTextNode("Details");
+  button2.appendChild(buttonText2);
 
-  //     const title = document.createElement("h3");
-  //     title.textContent = item.title;
-  //     title.style.marginBottom = "8px"; // Gap after the title
+  const button2Data = [
+    {
+      heading: "Certificate 1",
+      provider: "SHUBHAM A",
+      issuedDate: "2021-01-01",
+      validUntil: "2023-01-01",
+    },
+    {
+      heading: "Certificate 2",
+      provider: "Provider B",
+      issuedDate: "2021-06-15",
+      validUntil: "2023-06-15",
+    },
+    {
+      heading: "Certificate 3",
+      provider: "Provider C",
+      issuedDate: "2022-03-23",
+      validUntil: "2024-03-23",
+    },
+    {
+      heading: "Certificate 4",
+      provider: "Provider D",
+      issuedDate: "2022-07-30",
+      validUntil: "2024-07-30",
+    },
+  ];
+  button2.onclick = function () {
+    setSelectedButton(button2);
+    const modalBody = document.getElementById("certificateViewModalBody");
+    modalBody.innerHTML = "";
 
-  //     const description = document.createElement("p");
-  //     description.textContent = `Description: ${item.description}`;
-  //     description.style.marginBottom = "8px"; // Gap after the description
+    modalBody.style.height = "500px";
+    modalBody.style.overflowY = "auto";
+    const styleSheet = document.createElement("style");
+    styleSheet.type = "text/css";
+    styleSheet.innerText = `
+      #certificateViewModalBody::-webkit-scrollbar {
+        width: 8px;
+        border-radius: 100px;
+        background: var(--Card-fills-02, #1E1E1E);
+      }
+      #certificateViewModalBody::-webkit-scrollbar-thumb {
+        width: 8px;
+        height: 10px;
+        // border-radius: 100px;
+        background: var(--Brandscale-Primary, #F4F85A);
+        -webkit-border-radius: 100px;
+        -webkit-width: 10px;
+      }
+    `;
+    document.head.appendChild(styleSheet);
+    const boxData = button2Data.map((certificate) => ({
+      heading: certificate.heading,
+      rows: [
+        `<span class="key">Provider:</span> <span class="value">${certificate.provider}</span>`,
+        `<span class="key">Issued Date:</span> <span class="value">${certificate.issuedDate}</span>`,
+        `<span class="key">Valid Until:</span> <span class="value">${certificate.validUntil}</span>`,
+      ],
+    }));
 
-  //     const additionalInfo = document.createElement("p");
-  //     additionalInfo.textContent = `Additional Info: ${item.additionalInfo}`;
-  //     // additionalInfo.style.marginBottom = "8px"; // Gap after the additional info
+    boxData.forEach((box, index) => {
+      const dataContainer = document.createElement("div");
+      dataContainer.className = "ManagecertificatemodaltextContainer";
+      dataContainer.style.marginBottom = "24px";
 
-  //     dataContainer.appendChild(title);
-  //     dataContainer.appendChild(description);
-  //     dataContainer.appendChild(additionalInfo);
+      const heading = document.createElement("div");
+      heading.className = "ManagecertificateSubModalHeading";
+      heading.textContent = box.heading;
+      heading.style.marginBottom = "16px";
 
-  //     modalBody.appendChild(dataContainer);
-  //   });
-  // };
+      dataContainer.appendChild(heading);
+
+      // Create rows with a gap of 8px between them
+      box.rows.forEach((rowData, rowIndex) => {
+        const row = document.createElement("div");
+        row.innerHTML = rowData;
+        dataContainer.appendChild(row);
+      });
+
+      modalBody.appendChild(dataContainer);
+    });
+  };
 
   buttonContainer.appendChild(button1);
   buttonContainer.appendChild(button2);
@@ -260,6 +305,7 @@ function createCertificateViewModal() {
   modal.appendChild(modalContent);
 
   document.body.appendChild(modal);
+  resetButtonStyles();
 }
 
 function updateModalContent(data) {
@@ -357,7 +403,7 @@ function createInnerRow(item, rowIndex, text) {
   leftInnerContainer.style.gap = "10px";
 
   const leftImg = document.createElement("img");
-  leftImg.src = "/assets/lock.svg";
+  leftImg.src = "../../assets/lock.svg";
   leftImg.className = "innerIcon";
 
   const innerText = document.createElement("div");
@@ -365,7 +411,7 @@ function createInnerRow(item, rowIndex, text) {
   innerText.className = "innerText";
 
   const innerIconImg = document.createElement("img");
-  innerIconImg.src = "/assets/redirect.svg";
+  innerIconImg.src = "../../assets/redirect.svg";
   innerIconImg.width = "24";
   innerIconImg.className = "innerIcon innerIconHidden";
 
