@@ -1,0 +1,208 @@
+/* Your custom properties for colors, replace with actual colors if needed */
+:root {
+  --fill-2: #2d2d2d;
+  --background: #121212;
+}
+
+.container {
+  display: flex; /* Use flexbox layout */
+  height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1; /* Allow the main content to take up the remaining space */
+  /* Add some padding around the content */
+}
+
+body,
+html {
+  overflow-y: scroll; /* Keep the scrollbar even if not needed */
+  scrollbar-width: none; /* For Firefox */
+}
+
+body::-webkit-scrollbar, /* For Chrome, Safari, and Opera */
+html::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--Backgrounds-Dark01, #1b1b17);
+  overflow-y: hidden;
+  overflow-y: hidden;
+}
+/* Styles for the sidebar */
+.sidebar {
+  display: flex;
+  width: 323px;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  flex-shrink: 0;
+  border-radius: 0px 16px 16px 0px;
+  border-right: 1px solid var(--fill-2);
+  background: var(--background);
+  color: white; /* Set text color to white for all items inside the sidebar */
+  /* Additional styles for the sidebar content */
+  /* You can add more styles here for the sidebar items */
+}
+.sidebarContent {
+  display: flex;
+  width: 275px;
+  padding: 40px 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  flex-shrink: 0;
+}
+
+/* //button */
+.dropdown-btn {
+  padding: 6px 8px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: inherit;
+  /* color: white; */
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  /* border: 1px solid var(--fill-2, #2d2d2d); */
+
+  border-radius: 12px;
+  padding: 12px;
+  color: var(--fonts-icons-02, var(--text-02, #a3a393));
+
+  /* Onboarding/Body/Body L Bold 16 - 120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: -0.304px;
+}
+
+.dropdown-btn-active {
+  padding: 6px 8px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: inherit;
+  /* color: white; */
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid var(--fill-2, #2d2d2d);
+
+  border-radius: 12px;
+  padding: 12px;
+  color: var(--fonts-icons-01, var(--text-01, #fffff5));
+
+  /* Onboarding/Body/Body L Bold 16 - 120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: -0.304px;
+}
+
+/* Add a background color to the dropdown buttons on hover */
+
+/* Style the dropdown container */
+.dropdown-container {
+  display: none;
+  padding-left: 8px;
+  background-color: #121212;
+  margin-left: 21px;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-container a {
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  /* color: black; */
+  color: var(--fonts-icons-02, var(--text-02, #a3a393));
+
+  /* Onboarding/Details/Details Reg 12 - 120% */
+  font-family: "Aeonik TRIAL";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 14.4px */
+  letter-spacing: -0.24px;
+}
+
+/* Add a hover effect to the links */
+.dropdown-container a:hover {
+  /* border: 1px solid red; */
+  border-radius: 8px;
+  background: var(--Card-fills-02, #1e1e1e);
+}
+
+.divider {
+  height: 1px;
+  flex-shrink: 0;
+  align-self: stretch;
+  border-radius: 2px;
+  background: var(--fill-2, #2d2d2d);
+}
+.trust-store-heading {
+  color: var(--fonts-icons-01, var(--text-01, #fffff5));
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 48px */
+  letter-spacing: -0.92px;
+}
+
+.bottom-style-index {
+  position: absolute;
+  bottom: -300px;
+  left: 50%;
+  width: 373.541px;
+  height: 373.541px;
+  transform: rotate(-11.311deg);
+  flex-shrink: 0;
+  border-radius: 373.541px;
+  opacity: 0.3;
+  background: linear-gradient(
+    94deg,
+    #f4f85a 24.67%,
+    #f4f85a 24.67%,
+    #cdcdcd 87.64%
+  );
+  filter: blur(200px);
+}
+
+.container::after {
+  content: "";
+  position: fixed;
+  bottom: -400px;
+  left: 60%;
+  transform: translateX(-50%) rotate(-11.311deg);
+  width: 173.541px;
+  height: 373.541px;
+  border-radius: 373.541px;
+  opacity: 0.3;
+  background: linear-gradient(
+    94deg,
+    #f4f85a 24.67%,
+    #f4f85a 24.67%,
+    #cdcdcd 87.64%
+  );
+  filter: blur(200px);
+  z-index: -1;
+}

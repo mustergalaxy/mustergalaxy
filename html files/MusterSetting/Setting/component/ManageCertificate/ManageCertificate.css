@@ -1,0 +1,438 @@
+.manageCertificateBox {
+  display: flex;
+  width: 728px;
+  padding: 20px 32px;
+  align-items: center;
+  gap: 24px;
+  border-radius: 24px;
+  justify-content: space-between;
+  border: 1px solid var(--Borders-01, #2d2d2d);
+}
+.manageCrtificateBackIcon {
+  position: absolute;
+  left: 26%;
+  display: flex;
+  width: 48px;
+  height: 48px;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  border: 1.333px solid var(--Borders-01, #2d2d2d);
+  background: var(--Card-fills-02, #1e1e1e);
+}
+#setDocument {
+  flex-grow: 1;
+}
+.left {
+  display: flex;
+  gap: 5px;
+}
+.icon {
+  height: 20px;
+}
+
+.iconDiv {
+  border-radius: 10.667px;
+  display: flex;
+  width: 32px;
+  height: 32px;
+  padding: 6.667px 0px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.iconDiv:hover {
+  border-radius: 10.667px;
+  background: var(--Card-fills-01, #121212);
+  display: flex;
+  width: 32px;
+  height: 32px;
+  padding: 6.667px 0px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.smallBox {
+  display: inline-flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  border-radius: 24px;
+  background: var(--Element-fills-default, #131313);
+  box-shadow: 0px 4px 40px 0px rgba(244, 248, 90, 0.03);
+}
+
+.smallBoxHeading {
+  color: var(--fonts-icons-01, #fffff5);
+  font-family: "Aeonik TRIAL";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  padding-bottom: 24px;
+}
+.innerIconHidden {
+  visibility: hidden;
+}
+
+.innerContainer {
+}
+
+.innerContainer:hover .innerIconHidden {
+  visibility: visible;
+}
+.innerContainerHover {
+  display: flex;
+  width: 307px;
+  padding: 8px;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 8px;
+  color: var(--fonts-icons-01, #fffff5);
+
+  /* Onboarding/Body/Body L Reg 16 - 120% */
+  font-family: "Aeonik TRIAL";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: -0.304px;
+}
+
+.innerContainerHover:hover {
+  background: var(--Card-fills-Hover, #333333);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  position: relative;
+  margin: 10% auto;
+  padding: 66px 80px;
+  border: 1px solid var(--Borders-01, #2d2d2d);
+  background: var(--Element-fills-default, #131313);
+  box-shadow: 0px 4px 20px 0px rgba(244, 248, 90, 0.03);
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+  width: 500px;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  width: 100%;
+  color: white;
+}
+
+.ManageCertificateDeletemodalbody {
+  color: var(--fonts-icons-02, #a3a393);
+  text-align: center;
+
+  /* Landing/Desktop/Body/Body L Reg 24-120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.552px;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.modal-footer {
+  color: white;
+  text-align: right;
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  margin: 0 5px;
+}
+.ManageCertificatemodalCancel2button {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  border-radius: 16px;
+  border: 1px solid var(--Button-Primary, #f4f85a);
+  background: var(--Element-fills-default, #131313);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.4px;
+  color: white;
+}
+.mageCertificateModalDeleteHeading {
+  color: var(--fonts-icons-01, #fffff5);
+  text-align: center;
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.736px;
+}
+
+.DeleteButtonModal2 {
+  border-radius: 16px;
+  background: var(
+    --Button-Hover,
+    linear-gradient(180deg, #f4f85a 0%, #feffcf 100%)
+  );
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  color: var(--fonts-icons-inverse, #121212);
+
+  /* Onboarding/Body/Body XL - Bold 20-120 */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 24px */
+  letter-spacing: -0.4px;
+}
+.ManageCertificateChoseActionModal {
+  color: var(--fonts-icons-01, #fffff5);
+  /* Onboarding/Body/Body L Reg 16 - 120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: -0.304px;
+}
+.ManageCertificateOrganisation {
+  color: var(--fonts-icons-01, #fffff5);
+
+  /* Onboarding/Body/Body XL - Bold 20-120 */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 24px */
+  letter-spacing: -0.4px;
+  padding-right: 8px;
+}
+.manageCertificateValidity {
+  color: var(--fonts-icons-02, #a3a393);
+
+  /* Onboarding/Body/Body XL - Reg 20-120 */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 24px */
+  letter-spacing: -0.4px;
+}
+.certificateViewManageModal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.certificateViewManageContent {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+
+  display: flex;
+  width: 533px;
+  padding: 40px;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  gap: 32px;
+  border-radius: 32px;
+  border: 1px solid var(--Borders-01, #2d2d2d);
+  background: var(--Element-fills-default, #131313);
+  box-shadow: 0px 4px 20px 0px rgba(244, 248, 90, 0.03);
+}
+
+.certificateViewManageClose {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.certificateViewManageClose:hover,
+.certificateViewManageClose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.certificateViewManageHeader {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding: 10px;
+}
+
+.certificateViewManageButtonContainer {
+  display: flex;
+  padding: 10px;
+  align-items: flex-start;
+}
+
+.certificateViewManageButton {
+  display: flex;
+  height: 54px;
+  padding: 16px 24px;
+  align-items: center;
+  gap: 16px;
+  border-radius: 16px;
+  border: 1px solid var(--Card-fills-02, #1e1e1e);
+  text-align: justify;
+
+  /* Landing/Desktop/Body/Body S Reg 20-120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  background: var(
+    --Button-Hover,
+    linear-gradient(180deg, #f4f85a 0%, #feffcf 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Add more styles for the buttons */
+}
+
+.certificateViewManageBody {
+  padding: 10px;
+  /* Add more styles for the modal body */
+}
+
+/* Add animations for the modal */
+/* @keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+} */
+.ManagecertificatemodaltextContainer {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 16px;
+  border: 1px solid var(--Borders-01, #2d2d2d);
+}
+.CertificateViewModalHeading {
+  color: var(--fonts-icons-01, #fffff5);
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 38.4px */
+  letter-spacing: -0.736px;
+}
+.additionalModalTextClass {
+  color: var(--fonts-icons-02, #a3a393);
+
+  /* Landing/Desktop/Body/Body L Reg 24-120% */
+  font-family: "Aeonik TRIAL";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 28.8px */
+  letter-spacing: -0.552px;
+}
+.CertificateViewModalLogo {
+  width: 40;
+  height: 40;
+}
+
+.key {
+  color: var(--fonts-icons-01, #fffff5);
+
+  /* Landing/Mobile/Body/Body bold 16-120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: -0.368px;
+}
+.value {
+  color: var(--fonts-icons-02, #a3a393);
+
+  /* Landing/Mobile/Body/Body Red 16 - 120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: -0.368px;
+}
+.ManagecertificateSubModalHeading {
+  color: var(--fonts-icons-02, #a3a393);
+
+  /* Landing/Mobile/Body/Body bold 16-120% */
+  /* font-family: "Aeonik TRIAL"; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: -0.368px;
+}
