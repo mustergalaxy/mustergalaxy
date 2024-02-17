@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import CustomTooltip from "../../components/CustomToolTip/CustomToolTip";
 import assetsImage from "../../assets";
 import "./SignUpPage.css";
 
@@ -58,7 +58,23 @@ const SignUpPage = () => {
             Get an Urbit ID
           </span>
         </div>
-        <div id="signUp-page-bottom-text">Why do I need an Urbit ID ?</div>
+        <div
+          id="signUp-page-bottom-text"
+          style={{
+            paddingTop: "8px",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          Why do I need an Urbit ID
+          <CustomTooltip
+            title="By connecting your Urbit ID you can seamlessly 
+store and manage your browsing data, 
+ensuring it remains under your control at all times."
+          >
+            <span className="login-tooltip-trigger-text">?</span>
+          </CustomTooltip>
+        </div>
         <div className="singnup-page-ellipsis"></div>
       </div>
     </div>

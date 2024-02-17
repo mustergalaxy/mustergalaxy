@@ -24,6 +24,8 @@ import urbitforkGroup from "./urbitforkGroup.png";
 import facebookIndianFork from "./facebookIndianFork.svg";
 import expandIcon from "./expandIcon.svg";
 import urbitIndianForkbottomIcon from "./urbitIndianForkbottomIcon.svg";
+import musterOnbordingImg from "./musterOnbordingImg.png";
+import imagebottomstyle from "./imagebottomstyle.svg";
 
 const assetsImage = {
   Loginpageimage,
@@ -51,5 +53,7 @@ const assetsImage = {
   facebookIndianFork,
   expandIcon,
   urbitIndianForkbottomIcon,
+  musterOnbordingImg,
+  imagebottomstyle,
 };
 export default assetsImage;

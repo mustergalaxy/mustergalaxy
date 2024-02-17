@@ -1,6 +1,6 @@
 .signUp-page-main-container {
   display: flex;
-  background-color: black;
+  background-color: #121212;
   height: 100vh;
 }
 
@@ -36,18 +36,29 @@
 }
 
 #signUp-page-main-heading {
-  color: #fffff5;
+  color: var(--fonts-icons-01, var(--text-01, #fffff5));
+
+  /* Onboarding/Titles/H1 Reg 40 - 120% */
+  /* font-family: "Aeonik TRIAL"; */
   font-size: 40px;
-  padding-top: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 48px */
+  letter-spacing: -0.8px;
   padding-bottom: 8px;
 }
 
 #signUp-page-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #a3a393;
+  color: var(--fonts-icons-02, var(--text-02, #a3a393));
+  text-align: center;
+
+  /* Onboarding/Body/Body L Reg 16 - 120% */
+  /* font-family: "Aeonik TRIAL"; */
   font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: -0.304px;
 }
 
 #signup-page-signup-button {
@@ -65,7 +76,7 @@
   padding: 12px 24px;
   border-radius: 16px;
   border: 1px solid var(--Primary, #f4f85a);
-  background-color: black;
+  background-color: #121212;
   color: var(--Primary, #f4f85a);
   font-size: 16px;
   font-weight: 700;
@@ -152,7 +163,16 @@
     font-size: 30px;
   }
   #signUp-page-text {
-    font-size: 14px;
+    color: var(--fonts-icons-02, var(--text-02, #a3a393));
+    text-align: center;
+
+    /* Onboarding/Body/Body L Reg 16 - 120% */
+    /* font-family: "Aeonik TRIAL"; */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 19.2px */
+    letter-spacing: -0.304px;
   }
   #signup-page-signup-button {
     padding: 10px 20px;
