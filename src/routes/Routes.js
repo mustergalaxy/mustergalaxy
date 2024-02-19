@@ -102,6 +102,10 @@ const router = createBrowserRouter([
     element: <CreateWalletPassword />,
   },
   {
+    path: "musterCreatewalletpassword",
+    element: <CreateWalletPassword />,
+  },
+  {
     path: "unsupportedBlockChainModal",
     element: <UnsupportedBlockChainModal />,
   },

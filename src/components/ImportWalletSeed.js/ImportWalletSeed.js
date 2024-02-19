@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import assetsImage from "../../assets";
 import Sidebar from "../Sidebar/Sidebar";
 import CustomInput from "../customInput/CustomInput";
+import { SidebarContext } from "../../globalContext/SidebarContext/SidebarProvider";
+import { setCountValue } from "../../globalContext/SidebarContext/SidebarAction";
 import { styles } from "./ImportwalletSeedsStyle";
 
 import "./ImportWalletSeed.css";
@@ -11,9 +13,12 @@ const ImportedWalletSeed = () => {
   const [isToggled, setIsToggled] = useState(true);
   const [numOfInputs, setNumOfInputs] = useState(12);
 
+  const [sidebarState, sidebarDispatch] = useContext(SidebarContext);
+
   const navigate = useNavigate();
 
   const handleClick = () => {
+    sidebarDispatch(setCountValue(sidebarState.count + 1));
     navigate("/createwalletpassword", { state: { icon: " " } });
   };
 

@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import assetsImage from "../../assets";
 import Sidebar from "../Sidebar/Sidebar";
 import CustomInput from "../customInput";
 import { Formik, Form, Field } from "formik";
 import { styles } from "./CreateWalletStyles";
+import { SidebarContext } from "../../globalContext/SidebarContext/SidebarProvider";
+import { setCountValue } from "../../globalContext/SidebarContext/SidebarAction";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import "./CreateWalletPassword.css";
 
 const CreateWalletPassword = () => {
+  const [sidebarState, sidebarDispatch] = useContext(SidebarContext);
+
   const location = useLocation();
   const { icon } = location?.state;
   console.log("icon==>", icon);
@@ -19,6 +23,7 @@ const CreateWalletPassword = () => {
     icon === "musterIcon"
       ? navigate("/backupseedphrase")
       : navigate("/ImportwalletSuccessful");
+    sidebarDispatch(setCountValue(sidebarState.count + 1));
   }
   return (
     <div className="createWalletPassword-main-comntainer">

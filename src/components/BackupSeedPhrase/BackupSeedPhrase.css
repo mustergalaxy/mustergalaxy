@@ -1,5 +1,6 @@
 .backupSeedPhrase-main-comntainer {
   background: var(--background, #121212);
+  height: 100vh;
 }
 
 .backupSeedPhrase-side-ellipse {

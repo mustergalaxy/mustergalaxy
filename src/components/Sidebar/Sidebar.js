@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useContext, useState } from "react";
 import Box from "@mui/material/Box";
 // import CssBaseline from "@mui/material/CssBaseline";
 import Drawer from "@mui/material/Drawer";
@@ -9,9 +9,15 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Toolbar from "@mui/material/Toolbar";
 // import { useTheme } from '@mui/material/styles';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import { IoMenu, IoClose } from "react-icons/io5";
+
+import VerticalStepper from "../Stepper/Stepper";
+import { RiArrowDropDownLine } from "react-icons/ri";
+
+import { SidebarContext } from "../../globalContext/SidebarContext/SidebarProvider";
+import { SidebarListingContext } from "../../globalContext/SideBarListingContext/SidebarListingProvider";
 
 const drawerWidth = 289;
 
@@ -29,22 +35,134 @@ const indexStyle = {
   fontWeight: "700",
 };
 
-const drawerData = [
-  {
-    data: "Connect with Urbit",
-    index: 1,
-  },
-  {
-    data: "Set up wallet",
-    index: 2,
-  },
-  {
-    data: "Start using Muster",
-    index: 3,
-  },
-];
-
 function Sidebar(props) {
+  const location = useLocation();
+
+  // Extract the pathname from the location object
+  const path = location.pathname;
+
+  console.log("path==>", path);
+
+  const [sidebarListingState, sidebarListingDispatch] = useContext(
+    SidebarListingContext
+  );
+
+  const [sidebarState, sidebarDispatch] = useContext(SidebarContext);
+
+  console.log("sidebarState===>", sidebarState);
+  console.log("sidebarListingState===>", sidebarListingState.count);
+
+  // const shouldIncludeUrbitChildren = (path) => !path.includes("signupUrbit");
+
+  function shouldIncludeUrbitChildren(path) {
+    if (path.includes("signupEmail")) {
+      return [
+        {
+          index: 1,
+          data: "Try Muster",
+        },
+      ];
+    } else if (path.includes("provider")) {
+      return [
+        {
+          index: 1,
+          data: "Choose a provider",
+        },
+      ];
+    } else {
+      return null;
+    }
+  }
+
+  //wallet setupchildren
+
+  function getWalletSetupChildren(path) {
+    if (
+      path.includes("musterCreatewalletpassword") ||
+      path.includes("backupseedphrase") ||
+      path.includes("verifyseedphrase") ||
+      path.includes("createwalletSuccessful")
+    ) {
+      return [
+        // Define children for when path includes 'hi'
+        {
+          index: 1,
+          data: "Create or import wallet?",
+        },
+        {
+          index: 2,
+          data: "Create password",
+        },
+        {
+          index: 3,
+          data: "Seed phrase backup",
+        },
+        {
+          index: 4,
+          data: "Verify seed phrase backup",
+        },
+
+        // Add more children as needed
+      ];
+    } else if (
+      path.includes("importwalletseed") ||
+      path.includes("createwalletpassword") ||
+      path.includes("ImportwalletSuccessful")
+    ) {
+      return [
+        // Define children for when path includes 'by'
+        {
+          index: 1,
+          data: "Create or import wallet?",
+        },
+        {
+          index: 2,
+          data: "Import seed phrase ",
+        },
+        {
+          index: 3,
+          data: "Create password",
+        },
+        // Add more children as needed
+      ];
+    } else {
+      return [
+        // Define default children
+        {
+          index: 1,
+          data: "Create or import wallet?",
+        },
+        // Add more default children as needed
+      ];
+    }
+  }
+
+  const drawerData = [
+    {
+      data: "Connect with Urbit",
+      index: 1,
+      to: "/loginpage",
+      children: shouldIncludeUrbitChildren(path),
+    },
+    {
+      data: "Set up wallet",
+      index: 2,
+      to: "/loginpage",
+      children: getWalletSetupChildren(path),
+    },
+    {
+      data: "Start using Muster",
+      index: 3,
+      to: "/loginpage",
+      children: [
+        {
+          index: 1,
+          data: "Make Muster default?",
+        },
+      ],
+    },
+  ];
+
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   // const theme = useTheme();
@@ -70,7 +188,7 @@ function Sidebar(props) {
           textDecoration: "underline",
           cursor: "pointer",
         }}
-        onClick={signUpPage}
+        // onClick={signUpPage}
       >
         <svg
           style={{ paddingRight: "4px" }}
@@ -105,7 +223,7 @@ function Sidebar(props) {
         </IconButton>
       )}
       <List sx={{ padding: "15px", marginTop: "95px" }}>
-        {drawerData.map((text, index) => (
+        {/* {drawerData.map((text, index) => (
           <ListItem
             key={text.index}
             sx={{
@@ -129,6 +247,71 @@ function Sidebar(props) {
                 }
               />
             </ListItemButton>
+          </ListItem> */}
+        {drawerData.map((item, index) => (
+          <ListItem
+            key={item.index}
+            sx={{
+              border: "1px solid var(--Borders-01, #2D2D2D)",
+              borderRadius: "10px",
+              marginBottom: "5px",
+              marginTop: "16px",
+              color: "white",
+              padding: "18px 8px",
+
+              backgroundColor: "black", // Set the background color to match the Drawer's
+            }}
+            disablePadding
+          >
+            <Box sx={{ width: "100%" }}>
+              <ListItemButton
+                sx={{
+                  "&.MuiListItemButton-root": {
+                    paddingBottom: 0,
+                    paddingTop: 0, // Remove padding-bottom
+                    display: "flex", // Ensure flex layout
+                    justifyContent: "space-between",
+                  },
+                }}
+                // onClick={() => navigate(item.to)}
+              >
+                <ListItemText
+                  primary={
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                      <span
+                        style={{
+                          ...indexStyle,
+                          background:
+                            sidebarListingState.count >= item.index
+                              ? "linear-gradient(94deg, #F4F85A 24.67%, #CDCDCD 87.64%)"
+                              : "transparent", // Call the function to get the background color
+                          color:
+                            sidebarListingState.count >= item.index
+                              ? "black"
+                              : "white",
+                        }}
+                      >
+                        {item.index}
+                      </span>
+                      {item.data}
+                    </div>
+                  }
+                />
+                {item.children && sidebarListingState.count >= item.index && (
+                  <RiArrowDropDownLine />
+                )}
+              </ListItemButton>
+              {item.children && item.index === sidebarListingState.count && (
+                <div style={{ paddingLeft: "50px" }}>
+                  <VerticalStepper
+                    steps={item.children}
+                    labelStyles={{
+                      color: "white !important",
+                    }}
+                  />
+                </div>
+              )}
+            </Box>
           </ListItem>
         ))}
       </List>
@@ -195,6 +378,7 @@ function Sidebar(props) {
               boxSizing: "border-box",
               width: drawerWidth,
               backgroundColor: "black",
+              borderRadius: "16px",
             },
           }}
           open

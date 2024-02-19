@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
 import CustomInput from "../customInput";
 import Sidebar from "../Sidebar/Sidebar";
+import { SidebarListingContext } from "../../globalContext/SideBarListingContext/SidebarListingProvider";
+import { setListingCountValue } from "../../globalContext/SideBarListingContext/SidebarListingAction";
 import { styles } from "../signupUrbitID/SignupUrbit.styles";
 
 import "./SignupEmail.css";
@@ -10,7 +12,9 @@ import assetsImage from "../../assets";
 
 const SignupEmail = () => {
   const navigate = useNavigate();
-
+  const [sidebarListingState, sidebarListingDispatch] = useContext(
+    SidebarListingContext
+  );
   const [checked, setChecked] = useState(false);
 
   return (
@@ -35,6 +39,10 @@ const SignupEmail = () => {
           initialValues={{ urbitID: "", accessKey: "" }}
           onSubmit={(values, { setSubmitting, resetForm }) => {
             setTimeout(() => {
+              navigate("/setupwallet");
+              sidebarListingDispatch(
+                setListingCountValue(sidebarListingState.count + 1)
+              );
               resetForm();
               setSubmitting(false);
             }, 1000);
@@ -106,7 +114,7 @@ const SignupEmail = () => {
                     }
                     type="submit"
                     disabled={isSubmitting || !checked}
-                    onClick={() => navigate("/setupwallet")}
+                    // onClick={() => navigate("/setupwallet")}
                   >
                     Connect
                   </button>

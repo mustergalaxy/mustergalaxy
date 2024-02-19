@@ -1,5 +1,6 @@
 .ImportWalletSeed-main-comntainer {
   background: var(--background, #121212);
+  height: 100vh;
 }
 
 .ImportWalletSeed-side-ellipse {

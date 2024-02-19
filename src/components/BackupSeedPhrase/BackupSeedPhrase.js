@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import assetsImage from "../../assets";
 import Sidebar from "../Sidebar/Sidebar";
+import { SidebarContext } from "../../globalContext/SidebarContext/SidebarProvider";
+import { setCountValue } from "../../globalContext/SidebarContext/SidebarAction";
 import CustomInput from "../customInput/CustomInput";
 
 import "./BackupSeedPhrase.css";
@@ -10,6 +12,8 @@ import { styles } from "./BackupSeedPhraseStyle";
 const BackupSeedPhrase = () => {
   const [isHidden, setIsHidden] = useState(true);
   const [selectedInputs, setSelectedInputs] = useState([]);
+
+  const [sidebarState, sidebarDispatch] = useContext(SidebarContext);
 
   const navigate = useNavigate();
 
@@ -39,6 +43,11 @@ const BackupSeedPhrase = () => {
   const handleToggleVisibility = () => {
     setIsHidden(!isHidden);
   };
+
+  function handleSubmit() {
+    sidebarDispatch(setCountValue(sidebarState.count + 1));
+    navigate("/verifyseedphrase");
+  }
 
   return (
     <div className="backupSeedPhrase-main-comntainer">
@@ -94,10 +103,7 @@ const BackupSeedPhrase = () => {
           {inputElements}
         </div>
         <div>
-          <button
-            onClick={() => navigate("/verifyseedphrase")}
-            className="backupSeedPhrase-button"
-          >
+          <button onClick={handleSubmit} className="backupSeedPhrase-button">
             Continue
           </button>
         </div>

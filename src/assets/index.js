@@ -26,6 +26,9 @@ import expandIcon from "./expandIcon.svg";
 import urbitIndianForkbottomIcon from "./urbitIndianForkbottomIcon.svg";
 import musterOnbordingImg from "./musterOnbordingImg.png";
 import imagebottomstyle from "./imagebottomstyle.svg";
+import sidebarSelectedIcon from "./sidebarSelectedIcon.svg";
+import sidebarUncheckedBox from "./sidebarUncheckedBox.svg";
+import CheckedCreatedIcon from "./CheckedCreatedIcon.svg";
 
 const assetsImage = {
   Loginpageimage,
@@ -55,5 +58,8 @@ const assetsImage = {
   urbitIndianForkbottomIcon,
   musterOnbordingImg,
   imagebottomstyle,
+  sidebarSelectedIcon,
+  sidebarUncheckedBox,
+  CheckedCreatedIcon,
 };
 export default assetsImage;
