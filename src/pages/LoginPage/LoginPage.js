@@ -100,7 +100,11 @@ const LoginPage = () => {
                     }}
                   >
                     Where can I find my access key?
-                    <CustomTooltip title="This is a tooltip message. you can pass here your custom message">
+                    <CustomTooltip
+                      title="You can either use the ”+code” command 
+within your Urbit's dojo or easily locate it in 
+your hosting provider's admin section."
+                    >
                       <span className="login-tooltip-trigger-text">?</span>
                     </CustomTooltip>
                   </div>
