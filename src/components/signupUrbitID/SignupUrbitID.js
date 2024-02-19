@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
 import CustomInput from "../customInput/CustomInput";
 import CustomTooltip from "../../components/CustomToolTip/CustomToolTip";
 import Sidebar from "../Sidebar/Sidebar";
+import { SidebarListingContext } from "../../globalContext/SideBarListingContext/SidebarListingProvider";
+import { setListingCountValue } from "../../globalContext/SideBarListingContext/SidebarListingAction";
 import { styles } from "./SignupUrbit.styles";
 
 import assetsImage from "../../assets";
@@ -13,6 +15,9 @@ const SignupUrbitID = () => {
   const navigate = useNavigate();
 
   const [checked, setChecked] = useState(false);
+  const [sidebarListingState, sidebarListingDispatch] = useContext(
+    SidebarListingContext
+  );
 
   return (
     <div className="signup-urbit-main-container">
@@ -32,6 +37,9 @@ const SignupUrbitID = () => {
           onSubmit={(values, { setSubmitting, resetForm }) => {
             setTimeout(() => {
               navigate("/setupwallet");
+              sidebarListingDispatch(
+                setListingCountValue(sidebarListingState.count + 1)
+              );
               resetForm();
 
               setSubmitting(false);
@@ -74,7 +82,11 @@ const SignupUrbitID = () => {
                 }}
               >
                 Where can I find my access key?
-                <CustomTooltip title="This is a tooltip message. you can pass here your custom message">
+                <CustomTooltip
+                  title="You can either use the ”+code” command 
+within your Urbit's dojo or easily locate it in 
+your hosting provider's admin section."
+                >
                   <span className="login-tooltip-trigger-text">?</span>
                 </CustomTooltip>
               </div>

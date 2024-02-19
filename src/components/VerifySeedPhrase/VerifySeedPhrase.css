@@ -1,5 +1,6 @@
 .verifySeedPhrase-main-comntainer {
   background: var(--background, #121212);
+  height: 100vh;
 }
 
 .verifySeedPhrase-side-ellipse {

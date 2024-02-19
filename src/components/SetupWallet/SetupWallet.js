@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./SetupWallet.css";
 import Sidebar from "../Sidebar/Sidebar";
 import { useNavigate } from "react-router-dom";
+import { SidebarContext } from "../../globalContext/SidebarContext/SidebarProvider";
+import { setCountValue } from "../../globalContext/SidebarContext/SidebarAction";
 import assetsImage from "../../assets";
 
 const metadata = [
@@ -10,7 +12,7 @@ const metadata = [
     heading: "Muster wallet",
     about1: "Muster’s current supports covers",
     about2: "Ethereum, Solana, Hedera, Concodium, Sui, and Aptos",
-    link: "/createwalletpassword",
+    link: "/musterCreatewalletpassword",
   },
   {
     icon: "wallet",
@@ -24,13 +26,16 @@ const metadata = [
 
 const SetupWallet = () => {
   const navigate = useNavigate();
+  const [sidebarState, sidebarDispatch] = useContext(SidebarContext);
+
+  console.log("inside setup wallet=>", sidebarState);
 
   //   const signUpPage = () => {
   //     navigate('/signup'); // Replace '/path-to-redirect' with your desired path
   //   };
 
   const handleProviderClick = (providerData) => {
-    console.log(providerData.link);
+    sidebarDispatch(setCountValue(sidebarState.count + 1));
     // Navigate to the desired route and pass the providerData as state
     // { state: { link: providerData.link } }
     navigate(`${providerData.link}`, { state: { icon: providerData.icon } });

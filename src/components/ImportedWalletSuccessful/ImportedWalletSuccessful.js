@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import assetsImage from "../../assets";
+import { SidebarListingContext } from "../../globalContext/SideBarListingContext/SidebarListingProvider";
+import { setListingCountValue } from "../../globalContext/SideBarListingContext/SidebarListingAction";
 import Sidebar from "../Sidebar/Sidebar";
 
 import "./ImportedWalletSuccessful.css";
 
 const ImportedWalletSuccessful = () => {
+  const [sidebarListingState, sidebarListingDispatch] = useContext(
+    SidebarListingContext
+  );
   const navigate = useNavigate();
+  function handleSubmit() {
+    navigate("/defaultbrowser");
+    sidebarListingDispatch(setListingCountValue(sidebarListingState.count + 1));
+  }
   return (
     <div className="ImportedWalletSuccessfull-main-comntainer">
       <div className="ImportedWalletSuccessfull-side-ellipse"></div>
@@ -22,7 +31,7 @@ const ImportedWalletSuccessful = () => {
         </div>
         <div>
           <button
-            onClick={() => navigate("/defaultbrowser")}
+            onClick={handleSubmit}
             className="ImportedWalletSuccessfull-button"
           >
             Continue
