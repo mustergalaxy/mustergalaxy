@@ -22,6 +22,11 @@ const ImportedWalletSeed = () => {
     navigate("/createwalletpassword", { state: { icon: " " } });
   };
 
+  const handleDismiss = () => {
+    sidebarDispatch(setCountValue((sidebarState.count = 0)));
+    navigate("/setupwallet", { state: { icon: " " } });
+  };
+
   const handle12Words = () => {
     setIsToggled(true);
     setNumOfInputs(12);
@@ -102,7 +107,10 @@ const ImportedWalletSeed = () => {
             Continue
           </button>
         </div>
-        <div className="ImportWalletSeedButtonUnderText">
+        <div
+          onClick={handleDismiss}
+          className="ImportWalletSeedButtonUnderText"
+        >
           Dismiss, I’ll create a Muster wallet
         </div>
       </div>

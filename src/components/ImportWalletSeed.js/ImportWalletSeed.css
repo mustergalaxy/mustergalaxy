@@ -1,6 +1,6 @@
 .ImportWalletSeed-main-comntainer {
   background: var(--background, #121212);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .ImportWalletSeed-side-ellipse {
@@ -117,6 +117,7 @@
   letter-spacing: -0.24px;
   text-decoration-line: underline;
   padding: 24px 0px;
+  cursor: pointer;
 }
 @media screen and (max-width: 900px) {
   .ImportWalletSeed-text-container-wrapper {
