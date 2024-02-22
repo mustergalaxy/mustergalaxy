@@ -5,8 +5,16 @@ import assetsImage from "../../assets";
 import "./DefaultBrowser.css";
 
 const DefaultBrowser = () => {
-  const [checked, setChecked] = useState(true);
-  console.log("checked===>", checked);
+  // Using 'null' as the initial value to indicate that neither option is selected
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  // A handler function to update the selected option
+  const handleOptionChange = (option) => {
+    setSelectedOption(option);
+  };
+
+  console.log("Selected Option ===>", selectedOption);
+
   return (
     <div className="defaultBrowser-main-comntainer">
       <div className="defaultBrowser-side-ellipse"></div>
@@ -35,10 +43,10 @@ const DefaultBrowser = () => {
         >
           <div className="defaultDrowser-checkbox-container">
             <img
-              onClick={() => setChecked(true)}
+              onClick={() => handleOptionChange("yes")}
               style={{ cursor: "pointer" }}
               src={
-                checked
+                selectedOption === "yes"
                   ? assetsImage.filledCheckBox
                   : assetsImage.outlinedCheckBox
               }
@@ -48,12 +56,12 @@ const DefaultBrowser = () => {
           </div>
           <div className="defaultDrowser-checkbox-container">
             <img
-              onClick={() => setChecked(false)}
+              onClick={() => handleOptionChange("no")}
               style={{ cursor: "pointer" }}
               src={
-                checked
-                  ? assetsImage.outlinedCheckBox
-                  : assetsImage.filledCheckBox
+                selectedOption === "no"
+                  ? assetsImage.filledCheckBox
+                  : assetsImage.outlinedCheckBox
               }
               alt="check box"
             />
@@ -61,8 +69,17 @@ const DefaultBrowser = () => {
           </div>
         </div>
         <div>
-          <button className="defuaultbrowser-button">
-            {" "}
+          {/* <button className="defuaultbrowser-button">Start using Muster</button> */}
+          <button
+            className={
+              selectedOption
+                ? "defuaultbrowser-button"
+                : "defuaultbrowser-button-unchecked"
+            }
+            type="submit"
+            disabled={!selectedOption}
+            // onClick={() => navigate("/setupwallet")}
+          >
             Start using Muster
           </button>
         </div>

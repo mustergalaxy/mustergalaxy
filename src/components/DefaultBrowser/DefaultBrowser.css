@@ -111,6 +111,24 @@
   cursor: pointer;
 }
 
+.defuaultbrowser-button-unchecked {
+  display: flex;
+  width: 187px;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 16px;
+  background: var(--Button-Disable, #42423a);
+  /* font-family: Aeonik TRIAL; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.304px;
+  color: #121212;
+}
+
 @media screen and (max-width: 900px) {
   .defaultBrowser-text-container-wrapper {
     padding-left: 0px;
