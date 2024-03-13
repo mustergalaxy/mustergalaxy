@@ -24,11 +24,17 @@ import AccountSuccessfullyConnected from "../components/AccountSuccessfullyConne
 import VerifySeedPhrase from "../components/VerifySeedPhrase/VerifySeedPhrase";
 import IndianFork from "../components/IndianFork/IndianFork";
 import UrbitFork from "../components/UrbitFork/UrbitFork";
+import UrbitDomain from "../pages/UrbitDomain/UrbitDomain";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <OnbordingPage />,
+  },
+
+  {
+    path: "/urbitDomain",
+    element: <UrbitDomain />,
   },
   // {
   //   path: "/login",

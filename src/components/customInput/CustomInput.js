@@ -72,6 +72,8 @@ const CustomInput = ({
       className={combinedClasses}
       placeholder={placeholder}
       type={password ? (showPassword ? "text" : "password") : type}
+      onChange={props.onChange}
+      value={props.value}
       InputProps={{
         style: inputStyle,
         startAdornment: index !== undefined && (

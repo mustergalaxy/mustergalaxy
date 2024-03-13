@@ -1,31 +1,32 @@
-.collectibles-container {
+.urbitFavourite-container {
   display: flex;
   flex-wrap: wrap;
   overflow-y: auto;
-  height: 500px;
+  max-height: 400px;
   overflow: auto;
   scrollbar-width: none;
   /* flex: 1 0 0; */
 }
 
-.collectibles-image-container {
+.urbitFavourite-image-container {
   /* margin-right: 15px; */
   text-align: center;
   box-sizing: border-box;
   gap: 15px;
   display: flex;
+  flex-wrap: wrap;
   /* flex-direction: column; */
   border-radius: 24px;
   /* border: 1px solid var(--Borders-01, #2d2d2d); */
 }
 
-.collectibles-rounded-image {
+.urbitFavourite-rounded-image {
   border-radius: 10px;
   width: 141px;
   height: 141px;
   flex: 1 0 0;
 }
-.collectableScrollImage {
+/* .collectableScrollImage {
   width: 80px;
   height: 80px;
   flex-shrink: 0;
@@ -33,14 +34,14 @@
 }
 
 .collectableScrollBottomImage {
-  width: 263.298px;
-  height: 281.298px;
+  width: 163px;
+  height: 163px;
   border-radius: 22.579px;
-}
+} */
 
-.collectible-heading {
+.urbitFavourite-heading {
   /* margin-top: 32px;
-  margin-bottom: 24px; */
+    margin-bottom: 24px; */
   color: var(--fonts-icons-01, #fffff5);
 
   /* Onboarding/Titles/H2 Reg 24 - 120% */
@@ -52,7 +53,7 @@
   letter-spacing: -0.456px;
 }
 
-.collectible-svg-background {
+.urbitFavourite-svg-background {
   display: flex;
   width: 40px;
   height: 40px;
@@ -63,13 +64,17 @@
   /* margin-top: 20px; */
 }
 
-.collectible-right {
+.urbitFavourite-right {
   margin-left: auto;
   display: flex;
 }
+.urbitFavouriteScrollBottomImage {
+  width: 152px;
+  height: 153px;
+  border-radius: 24px;
+}
 
-.collectibles-scroll-container {
-  width: 99%;
+.urbitFavourite-scroll-container {
   padding-bottom: 16px;
   display: flex;
   flex-direction: row;
@@ -82,52 +87,30 @@
 }
 
 /* .rounded-box {
-  gap: 15px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 24px;
-  border: 1px solid var(--Borders-01, #2d2d2d);
-  padding: 16px 115.75px 27px 16px;
-} */
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 24px;
+    border: 1px solid var(--Borders-01, #2d2d2d);
+    padding: 16px 115.75px 27px 16px;
+  } */
 
 @media screen and (max-width: 600px) {
-  .collectibles-rounded-image {
+  .urbitFavourite-rounded-image {
     border-radius: 10px;
     width: 56px;
     height: 56px;
     flex: 1 0 0;
   }
 
-  .collectible-heading {
+  .urbitFavourite-heading {
     font-size: 20px;
   }
 }
 
-::-webkit-scrollbar {
-  width: 10px; /* or any suitable width */
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  width: 3px;
-  background: var(
-    --Scrollbar-Track,
-    #cccccc
-  ); /* Define the track background color here */
-  border-radius: 10px; /* Optional: if you want the track to have rounded corners */
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px; /* Define your border-radius here */
-  background: var(
-    --Button-Primary,
-    #f4f85a
-  ); /* Ensure the variable is defined or fallback will be used */
-}
-
 /* For Firefox */
 /* * {
-  scrollbar-width: thin;
-  scrollbar-color: var(--Button-Primary, #f4f85a)
-    var(--Scrollbar-Track, #1e1e1e);
-} */
+    scrollbar-width: thin;
+    scrollbar-color: var(--Button-Primary, #f4f85a)
+      var(--Scrollbar-Track, #1e1e1e);
+  } */

@@ -1,33 +1,36 @@
-import React from 'react'
+import React from "react";
 
-import Collectibles from '../../components/Collectibles/Collectibles';
-import Poaps from '../../components/Poaps/Poaps';
-import Social from '../../components/Social/Social';
-import Addresses from '../../components/addresses/Addresses';
-import LeftComponent from '../../components/leftComponent/LeftComponent';
-import Links from '../../components/links/Links';
-import Ownership from '../../components/ownership/Ownership';
-import Subnames from '../../components/subnames/Subnames';
+import Collectibles from "../../components/Collectibles/Collectibles";
+import Poaps from "../../components/Poaps/Poaps";
+import Social from "../../components/Social/Social";
+import Addresses from "../../components/addresses/Addresses";
+import LeftComponent from "../../components/leftComponent/LeftComponent";
+import Links from "../../components/links/Links";
+import Ownership from "../../components/ownership/Ownership";
+import Subnames from "../../components/subnames/Subnames";
 
-import './NftComponent.css'
+import "./NftComponent.css";
 
 const NftComponent = () => {
+  console.log("ocation.pathname", window.location.origin);
+  console.log("host", window.location.host);
+
   return (
     <div className="Nft-container">
-     <div className='leftcontainer'>
-    <LeftComponent />
-     </div>
-   <div className='rightcontainer'>
-    <Social/>
-   <Collectibles/>
-     <Poaps/>
-      <Addresses/>
-     <Subnames/>
-      <Links/>
-     <Ownership/>
+      <div className="leftcontainer">
+        <LeftComponent />
       </div>
-         </div>
-  )
-}
+      <div className="rightcontainer">
+        <Social />
+        <Collectibles />
+        <Poaps />
+        <Addresses />
+        <Subnames />
+        <Links />
+        <Ownership />
+      </div>
+    </div>
+  );
+};
 
-export default NftComponent
+export default NftComponent;

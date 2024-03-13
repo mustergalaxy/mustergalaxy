@@ -1,17 +1,17 @@
-.Nft-container {
+.Urbit-Domain-container {
   background-color: #1b1b17;
   height: fit-content;
   display: flex;
   font-size: 20px;
 }
 
-.leftcontainer {
+.urbitDomainleftcontainer {
   display: flex;
   width: 40%;
   height: 100vh;
 }
 
-.rightcontainer {
+.urbitDomainRightcontainer {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  .Nft-container {
+  .Urbit-Domain-container {
     background-color: #1b1b17;
     height: fit-content;
     display: flex;
@@ -29,7 +29,7 @@
     flex-wrap: wrap;
   }
 
-  .leftcontainer {
+  .urbitDomainleftcontainer {
     display: flex;
     width: 100%;
     height: 675px;
@@ -37,10 +37,10 @@
 }
 
 @media screen and (max-width: 600px) {
-  .Nft-container {
+  .Urbit-Domain-container {
     font-size: 14px;
   }
-  .leftcontainer {
+  .urbitDomainleftcontainer {
     display: flex;
     width: 100%;
     height: 500px;
