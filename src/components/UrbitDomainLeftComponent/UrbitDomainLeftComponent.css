@@ -1,0 +1,213 @@
+.UrbitDomain-Left-component-container {
+  width: 80%;
+  position: relative;
+  margin: 0 auto;
+  top: 1.5rem;
+}
+
+.UrbitDomain-left-container-banner {
+  border-radius: 20px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.UrbitDomain-left-container-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.UrbitDomain-left-container-profile-image {
+  position: absolute;
+  border-radius: 50%;
+  width: 179px;
+  height: 179px;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.UrbitDomain-left-container-ellipse {
+  width: 249px;
+  height: 249px;
+  position: absolute;
+  left: 25%;
+  top: 75px;
+  fill: var(
+    --Element-fills-active,
+    linear-gradient(94deg, #f4f85a 24.67%, #cdcdcd 87.64%)
+  );
+  opacity: 0.3;
+  filter: blur(150px);
+}
+.UrbitDomain-left-container-heading {
+  font-size: 40px;
+  font-weight: 400;
+  color: white;
+}
+
+.UrbitDomain-text-container {
+  position: relative;
+  top: 5.5rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.UrbitDomain-text-line {
+  color: var(--fonts-icons-02, var(--text-02, #a3a393));
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.304px;
+}
+
+.UrbitDomain-button-leftComponent-row {
+  position: relative;
+  top: 56px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.UrbitDomain-button1 {
+  width: 48%;
+  padding: 16px 24px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  background-color: #f4f85a;
+  cursor: pointer;
+  /* font-family: Aeonik TRIAL; */
+  font-size: 16px;
+
+  font-weight: 700;
+}
+.UrbitDomain-button2 {
+  width: 48%;
+  padding: 16px 24px;
+  border: 1px solid #f4f85a;
+  border-radius: 16px;
+  background-color: #1b1b17;
+  cursor: pointer;
+  color: #f4f85a;
+  /* font-family: Aeonik TRIAL; */
+  font-size: 16px;
+
+  font-weight: 700;
+}
+
+.UrbitDomain-center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.UrbitDomain-copy-text-container {
+  justify-content: center;
+  background-image: linear-gradient(to right, #f4f85a, #cdcdcd);
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  padding: 8px 16px;
+  margin-bottom: 18px;
+  border-radius: 25px;
+  width: 170px;
+}
+
+.UrbitDomain-copy-text {
+  flex-grow: 1;
+  margin-right: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 16px;
+
+  color: var(--fonts-icons-inverse, #121212);
+  /* font-family: Aeonik TRIAL; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 19.2px */
+  /* letter-spacing: -0.304px; */
+}
+
+.UrbitDomain-right {
+  display: flex;
+}
+
+.UrbitDomain-left-component-svgbackground {
+  border-radius: 100px;
+  /* width: 48px;
+  height: 48px; */
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+.UrbitDomain-leftcomponent-heaading {
+  display: flex;
+  align-items: baseline;
+  text-align: center;
+  justify-content: center;
+}
+
+.UrbitDomain-left-container-banner-icon {
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 16px;
+  border: 1px solid var(--Button-Primary, #f4f85a);
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(20px);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .UrbitDomain-left-container-profile-image {
+    width: 139px;
+    height: 139px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .UrbitDomain-left-container-profile-image {
+    width: 179px;
+    height: 179px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .UrbitDomain-left-container-heading {
+    font-size: 24px;
+  }
+
+  .UrbitDomain-left-container-banner {
+    height: 110px;
+  }
+  .UrbitDomain-left-container-profile-image {
+    width: 109px;
+    height: 109px;
+  }
+  .UrbitDomain-text-container {
+    top: 2.5rem;
+  }
+  .UrbitDomain-copy-text {
+    font-size: 14px;
+  }
+  .UrbitDomain-text-line {
+    font-size: 14px;
+  }
+  .UrbitDomain-button1 {
+    font-size: 14px;
+  }
+  .UrbitDomain-button2 {
+    font-size: 14px;
+  }
+}

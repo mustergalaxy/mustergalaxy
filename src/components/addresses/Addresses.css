@@ -27,6 +27,7 @@
 
 .address-right {
   margin-left: auto;
+  display: flex;
 }
 
 .icon {

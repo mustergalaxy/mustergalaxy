@@ -30,10 +30,10 @@ const BootstrapTooltip = styled(({ className, ...props }) => (
   },
 }));
 
-export default function CustomTooltip({ title, children }) {
+export default function CustomCopyTooltip({ title, children, open }) {
   console.log("title--->", title);
   return (
-    <BootstrapTooltip title={title} enterTouchDelay={0} leaveTouchDelay={100}>
+    <BootstrapTooltip title={title} placement="top" open={open}>
       {children}
     </BootstrapTooltip>
   );

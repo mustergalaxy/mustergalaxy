@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 
-import "./Collectibles.css";
+import "./UrbitDomainFavouriteGroup.css";
 
 const images = [
   { url: "https://picsum.photos/200/300", metadata: "Image 1 Metadata" },
@@ -21,25 +21,9 @@ const images = [
   { url: "https://picsum.photos/200/300", metadata: "Image 4 Metadata" },
 ];
 
-export default function Collectibles() {
+function UrbitDomainFavouriteGroup() {
   const [collected, setCollectable] = useState(true);
-
-  const bottomImageContainerRef = useRef(null);
   console.log("collected===>", collected);
-  const handleImageClick = (index) => {
-    // Find the corresponding image in the bottom container
-    const bottomImages = bottomImageContainerRef.current.children;
-    const targetImage = bottomImages[index];
-
-    // Scroll into the target image
-    if (targetImage) {
-      targetImage.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-        inline: "start",
-      });
-    }
-  };
   return (
     <div>
       {collected && (
@@ -53,9 +37,9 @@ export default function Collectibles() {
               paddingBottom: "24px",
             }}
           >
-            <div className="collectible-heading">Collectibles</div>
+            <div className="urbitFavourite-heading">Favourite groups</div>
             <span
-              className="collectible-right collectible-svg-background"
+              className="urbitFavourite-right urbitFavourite-svg-background"
               onClick={() => setCollectable(!collected)}
             >
               <svg
@@ -72,13 +56,13 @@ export default function Collectibles() {
               </svg>
             </span>
           </div>
-          <div className=" collectibles-image-container">
+          <div className=" urbitFavourite-image-container">
             {images.slice(0, 5).map((img, index) => (
               <div key={index}>
                 <img
                   src={img.url}
                   alt={img.metadata}
-                  className="collectibles-rounded-image"
+                  className="urbitFavourite-rounded-image"
                 />
               </div>
             ))}
@@ -92,7 +76,6 @@ export default function Collectibles() {
               background: "black",
               padding: "24px",
               borderRadius: "24px",
-              width: "95%",
             }}
           >
             <div
@@ -100,11 +83,14 @@ export default function Collectibles() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                paddingBottom: "40px",
+                paddingBottom: "48px",
               }}
             >
-              <div style={{ color: "white" }} className="collectible-heading">
-                Collectibles
+              <div
+                style={{ color: "white" }}
+                className="urbitFavourite-heading"
+              >
+                Favourite groups
               </div>
               <span
                 onClick={() => setCollectable(!collected)}
@@ -135,38 +121,30 @@ export default function Collectibles() {
                 </svg>
               </span>
             </div>
-            <div className="collectibles-scroll-container">
+            {/* <div
+              className="collectibles-scroll-container"
+              // style={scrollbarStyles}
+            >
               {images.map((img, index) => (
-                <div className="collectibles-image-container" key={index}>
+                <div className="collectibles-image-container">
                   <img
                     src={img.url}
                     alt={img.metadata}
                     className="collectableScrollImage"
-                    onClick={() => {
-                      handleImageClick(index);
-                      console.log("clicked");
-                    }}
                   />
                 </div>
               ))}
-            </div>
-            <div
-              className="collectibles-container"
-              style={{ paddingTop: "48px" }}
-              ref={bottomImageContainerRef}
-            >
+            </div> */}
+            <div className="urbitFavourite-container">
               {images.map((img, index) => (
-                <div
-                  key={index}
-                  className="collectibles-bottom-image-container"
-                >
+                <div className="">
                   <img
                     style={{
                       marginRight: "15px",
                     }}
                     src={img.url}
                     alt={img.metadata}
-                    className="collectableScrollBottomImage"
+                    className="urbitFavouriteScrollBottomImage"
                   />
                 </div>
               ))}
@@ -177,3 +155,5 @@ export default function Collectibles() {
     </div>
   );
 }
+
+export default UrbitDomainFavouriteGroup;

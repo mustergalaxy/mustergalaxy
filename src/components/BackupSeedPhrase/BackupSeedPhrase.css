@@ -123,8 +123,24 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-radius: 16px;
-  border: 1px solid var(--Element-fills-active, #f4f85a);
+
+  /* border: 1px solid var(--Element-fills-active, #f4f85a); */
+  /* border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #ff0000, #00ff00);
+  border-image-slice: 1;
+  border-radius: 16px !important; */
+  /* Adjust border width as needed */
+  border-style: solid;
+  border-image: linear-gradient(
+    to right,
+    #ff8a00,
+    #e52e71
+  ); /* Gradient colors */
+  border-image-slice: 1; /* 1 to fill the entire border */
+  border-radius: 20px; /* Border radius */
+
+  border-color: var(--Element-fills-active, #f4f85a);
 }
 @media screen and (max-width: 900px) {
   .backupSeedPhrase-text-container-wrapper {

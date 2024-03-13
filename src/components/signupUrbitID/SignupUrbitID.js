@@ -35,6 +35,7 @@ const SignupUrbitID = () => {
         <Formik
           initialValues={{ urbitID: "", accessKey: "" }}
           onSubmit={(values, { setSubmitting, resetForm }) => {
+            console.log("values--->", values);
             setTimeout(() => {
               navigate("/setupwallet");
               sidebarListingDispatch(
