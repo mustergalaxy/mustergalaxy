@@ -1,7 +1,7 @@
 .collectibles-container {
   display: flex;
   flex-wrap: wrap;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   height: 500px;
   overflow: auto;
   scrollbar-width: none;
@@ -33,7 +33,7 @@
 }
 
 .collectableScrollBottomImage {
-  width: 263.298px;
+  width: 265.298px;
   height: 281.298px;
   border-radius: 22.579px;
 }
@@ -69,7 +69,7 @@
 }
 
 .collectibles-scroll-container {
-  width: 99%;
+  max-width: 99%;
   padding-bottom: 16px;
   display: flex;
   flex-direction: row;
@@ -80,15 +80,6 @@
   overflow-x: auto; /* enables horizontal scrolling */
   /* Add other styles as needed */
 }
-
-/* .rounded-box {
-  gap: 15px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 24px;
-  border: 1px solid var(--Borders-01, #2d2d2d);
-  padding: 16px 115.75px 27px 16px;
-} */
 
 @media screen and (max-width: 600px) {
   .collectibles-rounded-image {
