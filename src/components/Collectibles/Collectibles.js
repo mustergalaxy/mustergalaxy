@@ -1,31 +1,58 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import "./Collectibles.css";
-
-const images = [
-  { url: "https://picsum.photos/200/300", metadata: "Image 1 Metadata" },
-  { url: "https://picsum.photos/200/300", metadata: "Image 2 Metadata" },
-  { url: "https://picsum.photos/200/300", metadata: "Image 3 Metadata" },
-  { url: "https://picsum.photos/200/300", metadata: "Image 4 Metadata" },
-  { url: "https://picsum.photos/200/300", metadata: "Image 1 Metadata" },
-  { url: "https://picsum.photos/200/300", metadata: "Image 2 Metadata" },
-  { url: "https://picsum.photos/200/300", metadata: "Image 3 Metadata" },
-  { url: "https://picsum.photos/200/300", metadata: "Image 4 Metadata" },
-  { url: "https://picsum.photos/200/300", metadata: "Image 1 Metadata" },
-  { url: "https://picsum.photos/200/300", metadata: "Image 2 Metadata" },
-  { url: "https://picsum.photos/200/300", metadata: "Image 3 Metadata" },
-  { url: "https://picsum.photos/200/300", metadata: "Image 4 Metadata" },
-  { url: "https://picsum.photos/200/300", metadata: "Image 1 Metadata" },
-  { url: "https://picsum.photos/200/300", metadata: "Image 2 Metadata" },
-  { url: "https://picsum.photos/200/300", metadata: "Image 3 Metadata" },
-  { url: "https://picsum.photos/200/300", metadata: "Image 4 Metadata" },
-];
+import CustomTooltip from "../CustomToolTip/CustomToolTip";
 
 export default function Collectibles() {
   const [collected, setCollectable] = useState(true);
 
+  const [imageData, setImageData] = useState(null);
+
+  // const [walletName, setWalletName] = useState("eth");
+  // const [address, setAddress] = useState()
+
+  const fetchCollectableImage = async () => {
+    const url = `https://testapi.websiteprotector.in/nft/bname/eth/address/0xFcB6BC97B09e01caF88C0738E0E25943C8Bc8a51`;
+
+    try {
+      const response = await fetch(url);
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const data = await response.json();
+
+      setImageData(data);
+      console.log("Fetched data:", data);
+    } catch (error) {
+      console.error("There was a problem fetching or logging the data:", error);
+    }
+  };
+
+  // useEffect to call the fetch function when the component mounts
+  useEffect(() => {
+    fetchCollectableImage();
+  }, []);
+
   const bottomImageContainerRef = useRef(null);
   console.log("collected===>", collected);
+
+  // const imageUrls = imageData?.eth.result.map((item) => {
+  //   return item.metadata.image;
+  // });
+
+  const imageUrls = imageData?.eth.result.map((item) => {
+    return {
+      imageUrl: item.metadata.image,
+      name: item.name,
+    };
+  });
+
+  // consolelog("img");
+
+  console.log("imageUrls==>", imageUrls);
+
   const handleImageClick = (index) => {
     // Find the corresponding image in the bottom container
     const bottomImages = bottomImageContainerRef.current.children;
@@ -72,14 +99,16 @@ export default function Collectibles() {
               </svg>
             </span>
           </div>
-          <div className=" collectibles-image-container">
-            {images.slice(0, 5).map((img, index) => (
+          <div className=" collectibles-image-container ">
+            {imageUrls?.slice(0, 5).map((img, index) => (
               <div key={index}>
-                <img
-                  src={img.url}
-                  alt={img.metadata}
-                  className="collectibles-rounded-image"
-                />
+                <CustomTooltip title={img.name}>
+                  <img
+                    src={img.imageUrl}
+                    alt={index}
+                    className="collectibles-rounded-image"
+                  />
+                </CustomTooltip>
               </div>
             ))}
           </div>
@@ -135,39 +164,45 @@ export default function Collectibles() {
                 </svg>
               </span>
             </div>
-            <div className="collectibles-scroll-container">
-              {images.map((img, index) => (
-                <div className="collectibles-image-container" key={index}>
-                  <img
-                    src={img.url}
-                    alt={img.metadata}
-                    className="collectableScrollImage"
-                    onClick={() => {
-                      handleImageClick(index);
-                      console.log("clicked");
-                    }}
-                  />
-                </div>
-              ))}
+            <div>
+              <div className="collectibles-scroll-container">
+                {imageUrls.map((img, index) => (
+                  <div className="collectibles-image-container" key={index}>
+                    <CustomTooltip title={img.name}>
+                      <img
+                        src={img.imageUrl}
+                        alt={index}
+                        className="collectableScrollImage"
+                        onClick={() => {
+                          handleImageClick(index);
+                          console.log("clicked");
+                        }}
+                      />
+                    </CustomTooltip>
+                  </div>
+                ))}
+              </div>
             </div>
             <div
               className="collectibles-container"
               style={{ paddingTop: "48px" }}
               ref={bottomImageContainerRef}
             >
-              {images.map((img, index) => (
+              {imageUrls.map((img, index) => (
                 <div
                   key={index}
                   className="collectibles-bottom-image-container"
                 >
-                  <img
-                    style={{
-                      marginRight: "15px",
-                    }}
-                    src={img.url}
-                    alt={img.metadata}
-                    className="collectableScrollBottomImage"
-                  />
+                  <CustomTooltip title={img.name}>
+                    <img
+                      style={{
+                        marginRight: "15px",
+                      }}
+                      src={img.imageUrl}
+                      alt={index}
+                      className="collectableScrollBottomImage"
+                    />
+                  </CustomTooltip>
                 </div>
               ))}
             </div>
