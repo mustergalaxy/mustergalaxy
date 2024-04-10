@@ -8,9 +8,6 @@ export default function Collectibles() {
 
   const [imageData, setImageData] = useState(null);
 
-  // const [walletName, setWalletName] = useState("eth");
-  // const [address, setAddress] = useState()
-
   const fetchCollectableImage = async () => {
     const url = `https://testapi.websiteprotector.in/nft/bname/eth/address/0xFcB6BC97B09e01caF88C0738E0E25943C8Bc8a51`;
 
@@ -30,7 +27,6 @@ export default function Collectibles() {
     }
   };
 
-  // useEffect to call the fetch function when the component mounts
   useEffect(() => {
     fetchCollectableImage();
   }, []);
@@ -38,18 +34,12 @@ export default function Collectibles() {
   const bottomImageContainerRef = useRef(null);
   console.log("collected===>", collected);
 
-  // const imageUrls = imageData?.eth.result.map((item) => {
-  //   return item.metadata.image;
-  // });
-
   const imageUrls = imageData?.eth.result.map((item) => {
     return {
       imageUrl: item.metadata.image,
       name: item.name,
     };
   });
-
-  // consolelog("img");
 
   console.log("imageUrls==>", imageUrls);
 
